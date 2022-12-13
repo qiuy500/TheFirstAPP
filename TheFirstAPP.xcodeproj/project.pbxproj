@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B540294891CE00AF6FE6 /* FirstgradeView.swift */; };
+		E242B543294892A200AF6FE6 /* SencondgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B542294892A200AF6FE6 /* SencondgradeView.swift */; };
+		E242B545294895F700AF6FE6 /* ThirdgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B544294895F700AF6FE6 /* ThirdgradeView.swift */; };
+		E242B5472948990B00AF6FE6 /* ToMaToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B5462948990B00AF6FE6 /* ToMaToView.swift */; };
+		E242B5492948997700AF6FE6 /* Multiplechoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B5482948997700AF6FE6 /* Multiplechoice.swift */; };
+		E242B54B294899B700AF6FE6 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B54A294899B700AF6FE6 /* Schedule.swift */; };
+		E242B54D29489C2F00AF6FE6 /* Wrongquestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B54C29489C2F00AF6FE6 /* Wrongquestion.swift */; };
 		E26FEADD2941730C00FDEAAF /* TheFirstAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26FEADC2941730C00FDEAAF /* TheFirstAPPApp.swift */; };
 		E26FEADF2941730C00FDEAAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26FEADE2941730C00FDEAAF /* ContentView.swift */; };
 		E26FEAE12941731000FDEAAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26FEAE02941731000FDEAAF /* Assets.xcassets */; };
@@ -14,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E242B540294891CE00AF6FE6 /* FirstgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstgradeView.swift; sourceTree = "<group>"; };
+		E242B542294892A200AF6FE6 /* SencondgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SencondgradeView.swift; sourceTree = "<group>"; };
+		E242B544294895F700AF6FE6 /* ThirdgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdgradeView.swift; sourceTree = "<group>"; };
+		E242B5462948990B00AF6FE6 /* ToMaToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMaToView.swift; sourceTree = "<group>"; };
+		E242B5482948997700AF6FE6 /* Multiplechoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplechoice.swift; sourceTree = "<group>"; };
+		E242B54A294899B700AF6FE6 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		E242B54C29489C2F00AF6FE6 /* Wrongquestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrongquestion.swift; sourceTree = "<group>"; };
 		E26FEAD92941730C00FDEAAF /* TheFirstAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFirstAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26FEADC2941730C00FDEAAF /* TheFirstAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheFirstAPPApp.swift; sourceTree = "<group>"; };
 		E26FEADE2941730C00FDEAAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,7 +65,14 @@
 		E26FEADB2941730C00FDEAAF /* TheFirstAPP */ = {
 			isa = PBXGroup;
 			children = (
+				E242B540294891CE00AF6FE6 /* FirstgradeView.swift */,
+				E242B542294892A200AF6FE6 /* SencondgradeView.swift */,
+				E242B544294895F700AF6FE6 /* ThirdgradeView.swift */,
+				E242B5462948990B00AF6FE6 /* ToMaToView.swift */,
+				E242B5482948997700AF6FE6 /* Multiplechoice.swift */,
 				E26FEADC2941730C00FDEAAF /* TheFirstAPPApp.swift */,
+				E242B54A294899B700AF6FE6 /* Schedule.swift */,
+				E242B54C29489C2F00AF6FE6 /* Wrongquestion.swift */,
 				E26FEADE2941730C00FDEAAF /* ContentView.swift */,
 				E26FEAE02941731000FDEAAF /* Assets.xcassets */,
 				E26FEAE22941731000FDEAAF /* Preview Content */,
@@ -137,7 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E242B5472948990B00AF6FE6 /* ToMaToView.swift in Sources */,
+				E242B545294895F700AF6FE6 /* ThirdgradeView.swift in Sources */,
+				E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */,
+				E242B543294892A200AF6FE6 /* SencondgradeView.swift in Sources */,
 				E26FEADF2941730C00FDEAAF /* ContentView.swift in Sources */,
+				E242B54D29489C2F00AF6FE6 /* Wrongquestion.swift in Sources */,
+				E242B5492948997700AF6FE6 /* Multiplechoice.swift in Sources */,
+				E242B54B294899B700AF6FE6 /* Schedule.swift in Sources */,
 				E26FEADD2941730C00FDEAAF /* TheFirstAPPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
