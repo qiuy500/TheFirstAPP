@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Multiplechoice: View {
+    @State var timerun = 60
     var body: some View {
         Text("Multiplechoice")
     }
