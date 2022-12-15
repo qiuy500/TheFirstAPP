@@ -14,6 +14,8 @@
 		E242B5492948997700AF6FE6 /* Multiplechoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B5482948997700AF6FE6 /* Multiplechoice.swift */; };
 		E242B54B294899B700AF6FE6 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B54A294899B700AF6FE6 /* Schedule.swift */; };
 		E242B54D29489C2F00AF6FE6 /* Wrongquestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B54C29489C2F00AF6FE6 /* Wrongquestion.swift */; };
+		E24C678F294B16A900D54E03 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C678E294B16A900D54E03 /* BottomView.swift */; };
+		E24C6791294B1C6C00D54E03 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24C6790294B1C6C00D54E03 /* HomeView.swift */; };
 		E26FEADD2941730C00FDEAAF /* TheFirstAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26FEADC2941730C00FDEAAF /* TheFirstAPPApp.swift */; };
 		E26FEADF2941730C00FDEAAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26FEADE2941730C00FDEAAF /* ContentView.swift */; };
 		E26FEAE12941731000FDEAAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26FEAE02941731000FDEAAF /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		E242B5482948997700AF6FE6 /* Multiplechoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplechoice.swift; sourceTree = "<group>"; };
 		E242B54A294899B700AF6FE6 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		E242B54C29489C2F00AF6FE6 /* Wrongquestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrongquestion.swift; sourceTree = "<group>"; };
+		E24C678E294B16A900D54E03 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		E24C6790294B1C6C00D54E03 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E26FEAD92941730C00FDEAAF /* TheFirstAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFirstAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26FEADC2941730C00FDEAAF /* TheFirstAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheFirstAPPApp.swift; sourceTree = "<group>"; };
 		E26FEADE2941730C00FDEAAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,8 +71,10 @@
 			children = (
 				E2ED04FE2948AE52000A234B /* New Group */,
 				E242B5462948990B00AF6FE6 /* ToMaToView.swift */,
+				E24C6790294B1C6C00D54E03 /* HomeView.swift */,
 				E242B5482948997700AF6FE6 /* Multiplechoice.swift */,
 				E26FEADC2941730C00FDEAAF /* TheFirstAPPApp.swift */,
+				E24C678E294B16A900D54E03 /* BottomView.swift */,
 				E242B54A294899B700AF6FE6 /* Schedule.swift */,
 				E242B54C29489C2F00AF6FE6 /* Wrongquestion.swift */,
 				E26FEADE2941730C00FDEAAF /* ContentView.swift */,
@@ -171,10 +177,12 @@
 				E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */,
 				E242B543294892A200AF6FE6 /* SencondgradeView.swift in Sources */,
 				E26FEADF2941730C00FDEAAF /* ContentView.swift in Sources */,
+				E24C6791294B1C6C00D54E03 /* HomeView.swift in Sources */,
 				E242B54D29489C2F00AF6FE6 /* Wrongquestion.swift in Sources */,
 				E242B5492948997700AF6FE6 /* Multiplechoice.swift in Sources */,
 				E242B54B294899B700AF6FE6 /* Schedule.swift in Sources */,
 				E26FEADD2941730C00FDEAAF /* TheFirstAPPApp.swift in Sources */,
+				E24C678F294B16A900D54E03 /* BottomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

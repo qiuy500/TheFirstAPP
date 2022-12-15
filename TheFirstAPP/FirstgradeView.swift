@@ -9,22 +9,8 @@ import SwiftUI
 
 struct FirstgradeView: View {
     var body: some View {
-        VStack {
-            TabView{
-                ToMaToView()
-                    .tabItem{
-                        Image("tomato")
-                    }
-                Multiplechoice()
-                    .tabItem{
-                        Image(systemName: "pencil.line")
-                    }
-                Wrongquestion()
-                    .tabItem{
-                        Image(systemName: "book.circle")
-                    }
-                
-            }
+        VStack{
+            BottomView()
         }
     }
 }
