@@ -65,9 +65,7 @@
 		E26FEADB2941730C00FDEAAF /* TheFirstAPP */ = {
 			isa = PBXGroup;
 			children = (
-				E242B540294891CE00AF6FE6 /* FirstgradeView.swift */,
-				E242B542294892A200AF6FE6 /* SencondgradeView.swift */,
-				E242B544294895F700AF6FE6 /* ThirdgradeView.swift */,
+				E2ED04FE2948AE52000A234B /* New Group */,
 				E242B5462948990B00AF6FE6 /* ToMaToView.swift */,
 				E242B5482948997700AF6FE6 /* Multiplechoice.swift */,
 				E26FEADC2941730C00FDEAAF /* TheFirstAPPApp.swift */,
@@ -86,6 +84,16 @@
 				E26FEAE32941731000FDEAAF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E2ED04FE2948AE52000A234B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				E242B540294891CE00AF6FE6 /* FirstgradeView.swift */,
+				E242B542294892A200AF6FE6 /* SencondgradeView.swift */,
+				E242B544294895F700AF6FE6 /* ThirdgradeView.swift */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +311,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +341,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

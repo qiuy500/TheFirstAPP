@@ -15,7 +15,15 @@ struct FirstgradeView: View {
                     .tabItem{
                         Image("tomato")
                     }
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                Multiplechoice()
+                    .tabItem{
+                        Image(systemName: "pencil.line")
+                    }
+                Wrongquestion()
+                    .tabItem{
+                        Image(systemName: "book.circle")
+                    }
+                
             }
         }
     }
