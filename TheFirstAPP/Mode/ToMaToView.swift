@@ -17,7 +17,7 @@ struct ToMaToView: View {
             Image("tomato")
                 .frame(width: 90, height: 30,alignment: .center)
                 .foregroundColor(Color.red)
-            Text("剩餘時間：\(timeRemaining) 秒")
+            Text("剩餘時間：\(timeRemaining / 60) 分鐘\(timeRemaining - (timeRemaining / 60 * 60))秒")
                 .font(.largeTitle)
                 .padding(.bottom, 50)
                 .onReceive(timer) { _ in // 每次收到 timer 發送的事件時
