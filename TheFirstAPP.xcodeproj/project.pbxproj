@@ -20,6 +20,13 @@
 		E26FEADF2941730C00FDEAAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26FEADE2941730C00FDEAAF /* ContentView.swift */; };
 		E26FEAE12941731000FDEAAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26FEAE02941731000FDEAAF /* Assets.xcassets */; };
 		E26FEAE42941731000FDEAAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26FEAE32941731000FDEAAF /* Preview Assets.xcassets */; };
+		ECB6085B29501BD70052AF45 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ECB6085A29501BD70052AF45 /* FirebaseAuth */; };
+		ECB6085D29501BD70052AF45 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = ECB6085C29501BD70052AF45 /* FirebaseAuthCombine-Community */; };
+		ECB6085F29501BD70052AF45 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ECB6085E29501BD70052AF45 /* FirebaseFirestore */; };
+		ECB6086129501BD70052AF45 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = ECB6086029501BD70052AF45 /* FirebaseFirestoreCombine-Community */; };
+		ECB6086329501BD70052AF45 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB6086229501BD70052AF45 /* FirebaseFirestoreSwift */; };
+		ECB6086529509C080052AF45 /* ToMoToSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB6086429509C080052AF45 /* ToMoToSound.swift */; };
+		ECB6086B2950A3120052AF45 /* 番茄鈴聲.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECB6086A2950A3120052AF45 /* 番茄鈴聲.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,8 @@
 		E26FEADE2941730C00FDEAAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E26FEAE02941731000FDEAAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E26FEAE32941731000FDEAAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ECB6086429509C080052AF45 /* ToMoToSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToMoToSound.swift; sourceTree = "<group>"; };
+		ECB6086A2950A3120052AF45 /* 番茄鈴聲.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "番茄鈴聲.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +53,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB6086329501BD70052AF45 /* FirebaseFirestoreSwift in Frameworks */,
+				ECB6085B29501BD70052AF45 /* FirebaseAuth in Frameworks */,
+				ECB6086129501BD70052AF45 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				ECB6085D29501BD70052AF45 /* FirebaseAuthCombine-Community in Frameworks */,
+				ECB6085F29501BD70052AF45 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +67,9 @@
 		E24C6792294CA7AE00D54E03 /* Mode */ = {
 			isa = PBXGroup;
 			children = (
+				ECB6086A2950A3120052AF45 /* 番茄鈴聲.mp3 */,
 				E242B5462948990B00AF6FE6 /* ToMaToView.swift */,
+				ECB6086429509C080052AF45 /* ToMoToSound.swift */,
 				E242B5482948997700AF6FE6 /* Multiplechoice.swift */,
 				E242B54A294899B700AF6FE6 /* Schedule.swift */,
 				E242B54C29489C2F00AF6FE6 /* Wrongquestion.swift */,
@@ -126,6 +142,13 @@
 			dependencies = (
 			);
 			name = TheFirstAPP;
+			packageProductDependencies = (
+				ECB6085A29501BD70052AF45 /* FirebaseAuth */,
+				ECB6085C29501BD70052AF45 /* FirebaseAuthCombine-Community */,
+				ECB6085E29501BD70052AF45 /* FirebaseFirestore */,
+				ECB6086029501BD70052AF45 /* FirebaseFirestoreCombine-Community */,
+				ECB6086229501BD70052AF45 /* FirebaseFirestoreSwift */,
+			);
 			productName = TheFirstAPP;
 			productReference = E26FEAD92941730C00FDEAAF /* TheFirstAPP.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +177,9 @@
 				Base,
 			);
 			mainGroup = E26FEAD02941730C00FDEAAF;
+			packageReferences = (
+				ECB6085929501BD70052AF45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = E26FEADA2941730C00FDEAAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -168,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB6086B2950A3120052AF45 /* 番茄鈴聲.mp3 in Resources */,
 				E26FEAE42941731000FDEAAF /* Preview Assets.xcassets in Resources */,
 				E26FEAE12941731000FDEAAF /* Assets.xcassets in Resources */,
 			);
@@ -187,6 +214,7 @@
 				E26FEADF2941730C00FDEAAF /* ContentView.swift in Sources */,
 				E24C6791294B1C6C00D54E03 /* HomeView.swift in Sources */,
 				E242B54D29489C2F00AF6FE6 /* Wrongquestion.swift in Sources */,
+				ECB6086529509C080052AF45 /* ToMoToSound.swift in Sources */,
 				E242B5492948997700AF6FE6 /* Multiplechoice.swift in Sources */,
 				E242B54B294899B700AF6FE6 /* Schedule.swift in Sources */,
 				E26FEADD2941730C00FDEAAF /* TheFirstAPPApp.swift in Sources */,
@@ -393,6 +421,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECB6085929501BD70052AF45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECB6085A29501BD70052AF45 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB6085929501BD70052AF45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		ECB6085C29501BD70052AF45 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB6085929501BD70052AF45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		ECB6085E29501BD70052AF45 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB6085929501BD70052AF45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		ECB6086029501BD70052AF45 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB6085929501BD70052AF45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		ECB6086229501BD70052AF45 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB6085929501BD70052AF45 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E26FEAD12941730C00FDEAAF /* Project object */;
 }

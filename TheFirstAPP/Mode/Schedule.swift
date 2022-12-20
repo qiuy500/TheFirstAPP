@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct Schedule: View {
+    var columngrid :[GridItem] = [
+        GridItem(.flexible(), spacing:1),
+        GridItem(.flexible(), spacing:1)
+    
+    ]
+    var testschedule :[String] =
+    ["a","b","c","d","e","f","g"]
     var body: some View {
-        Text("Schedule")
+        VStack {
+            LazyVGrid(columns: columngrid){
+                ForEach(0...1002,id:\.self){
+                    Text(testschedule[$0 % testschedule.count])
+                }
+            }
+        }
     }
 }
 

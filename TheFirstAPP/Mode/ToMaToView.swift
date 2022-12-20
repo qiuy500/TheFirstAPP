@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
-
+import AVFoundation
 struct ToMaToView: View {
     @State var isRunning = false // 記錄定時器是否運行
     @State var timeRemaining = 0 // 記錄定時器的剩餘時間
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() // 建立一個計時器
+    var audioPlayer: AVAudioPlayer!
+    let url = Bundle.main.url(forResource: "番茄鈴聲", withExtension: "mp3")
+    var soundswitch = false
+
     var body: some View {
+        
         VStack {
             // 定義一個文本標籤，用於顯示定時器的剩餘時間
             Image("tomato")
@@ -34,11 +39,15 @@ struct ToMaToView: View {
                 self.isRunning.toggle()
             }) {
                 // 根據定時器的運行狀態，顯示不同的按鈕文本
-                if isRunning {
-                    Text("停止")
-                } else {
-                    Text("開始")
+                Group {
+                    if isRunning {
+                        Text("停止")
+                    }
+                    if !isRunning {
+                        Text("开始")
+                    }
                 }
+
             }
             .font(.custom("", size: 50))
             
@@ -46,6 +55,18 @@ struct ToMaToView: View {
             TextField("輸入時間", value: $timeRemaining, formatter: NumberFormatter())
                 .keyboardType(.numberPad)
                 .padding(.top, 50)
+            if timeRemaining == 0{
+                soundswitch = true
+            }
+             if soundswitch = true{
+                do{
+                    audioPlayer = try AVAudioPlayer(contentsOf: url!)
+                    audioPlayer.prepareToPlay()
+                    audioPlayer.play() // 在這裡加入 audioPlayer.play() 方法
+                }catch {
+                    // 如果發生錯誤，則在這裡處理
+                }
+            }
         }
     }
 }
