@@ -10,6 +10,8 @@ import AVFoundation
 struct ToMaToView: View {
     @State var isRunning = false // 記錄定時器是否運行
     @State var timeRemaining = 0 // 記錄定時器的剩餘時間
+    @State var min = 0
+    @State var sen = 0
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() // 建立一個計時器
     var audioPlayer: AVAudioPlayer!
     let url = Bundle.main.url(forResource: "番茄鈴聲", withExtension: "mp3")
@@ -30,6 +32,9 @@ struct ToMaToView: View {
                         if self.timeRemaining > 0 { // 如果計時器還沒有結束
                             self.timeRemaining -= 1 // 將剩餘時間減一秒
                         }
+                    }else{
+                        timeRemaining = min * 60 + sen
+                        self.isRunning = false
                     }
 
                     // 定義一個按鈕，用於控制定時器的運行
@@ -42,8 +47,7 @@ struct ToMaToView: View {
                 Group {
                     if isRunning {
                         Text("停止")
-                    }
-                    if !isRunning {
+                    }else{
                         Text("开始")
                     }
                 }
@@ -52,10 +56,16 @@ struct ToMaToView: View {
             .font(.custom("", size: 50))
             
             // 定義一個文本框，用於輸入定時器的時間
-            TextField("輸入時間", value: $timeRemaining, formatter: NumberFormatter())
-                .keyboardType(.numberPad)
-                .padding(.top, 50)
-            if timeRemaining == 0{
+            HStack {
+                Text("輸入分鐘")
+                TextField("輸入分鐘", value: $min, formatter: NumberFormatter())
+                    .keyboardType(.numberPad)
+                Text("輸入秒")
+                TextField("輸入秒", value: $sen, formatter: NumberFormatter())
+                    .keyboardType(.numberPad)
+            }
+            
+            /*if timeRemaining == 0{
                 soundswitch = true
             }
              if soundswitch = true{
@@ -66,7 +76,7 @@ struct ToMaToView: View {
                 }catch {
                     // 如果發生錯誤，則在這裡處理
                 }
-            }
+            }*/
         }
     }
 }
