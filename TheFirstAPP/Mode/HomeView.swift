@@ -9,7 +9,22 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("HomeView")
+        VStack {
+            TabView{
+                FirstgradeView()
+                    .tabItem(){
+                        Text("一年級")
+                    }
+                SencondgradeView()
+                    .tabItem(){
+                        Text("二年級")
+                    }
+                ThirdgradeView()
+                    .tabItem(){
+                        Text("三年級")
+                    }
+            }
+        }
     }
 }
 

@@ -10,8 +10,11 @@ import AVFoundation
 struct ToMaToView: View {
     @State var isRunning = false // 記錄定時器是否運行
     @State var timeRemaining = 0 // 記錄定時器的剩餘時間
-    @State var min = 5
+    @State var min = 0
     @State var sen = 0
+    @State var x = 0
+    @State var y = 0
+    @State var heidht:CGFloat = 50
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() // 建立一個計時器
     @State var audioPlayer: AVAudioPlayer!
     let url = Bundle.main.url(forResource: "番茄鈴聲", withExtension: "mp3")
@@ -20,9 +23,16 @@ struct ToMaToView: View {
         
         VStack {
             // 定義一個文本標籤，用於顯示定時器的剩餘時間
+            //Text("\(soundswitch)")
+            Text("x = \(x)")
+            Text("y = \(y)")
             Image("tomato")
-                .frame(width: 90, height: 30,alignment: .center)
+                .frame(alignment: .leading)
+                .padding()
+            Image(systemName: "square.fill")
+                .resizable()
                 .foregroundColor(Color.red)
+                .frame(width: 10,height: heidht)
             Text("剩餘時間：\(timeRemaining / 60) 分鐘\(timeRemaining - (timeRemaining / 60 * 60))秒")
                 .font(.largeTitle)
                 .padding(.bottom, 50)
@@ -30,12 +40,16 @@ struct ToMaToView: View {
                     if isRunning{
                         if self.timeRemaining > 0 { // 如果計時器還沒有結束
                             self.timeRemaining -= 1 // 將剩餘時間減一秒
-                        }else{
+                            if heidht > 0{
+                                heidht -= 5
+                            }
+                        }else{//計時器結束
                             self.isRunning = false
                             soundswitch = true
                         }
                     }else{
                         timeRemaining = min * 60 + sen
+                        heidht = CGFloat(self.timeRemaining)
                     }
                     if timeRemaining == 0{
                         soundswitch = true
@@ -47,17 +61,25 @@ struct ToMaToView: View {
                             audioPlayer.play() // 在這裡加入 audioPlayer.play() 方法
                         }catch {
                             // 如果發生錯誤，則在這裡處理
+                            
                         }
                     }
                     // 定義一個按鈕，用於控制定時器的運行
+                    if x == 0 || x != 0{
+                        if x > y {
+                            y += 1
+                        }else{
+                            x += 1
+                        }
+                    }
                 }
             Button(action: {
                 // 點擊按鈕時，切換定時器的運行狀態
                 self.isRunning.toggle()
                 if isRunning{
-                    timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+                    timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()//開始計時
                 }else{
-                    self.timer.upstream.connect().cancel()
+                    self.timer.upstream.connect().cancel()//停止計時
 
                 }
             }) {

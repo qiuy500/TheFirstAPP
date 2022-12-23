@@ -10,7 +10,7 @@ import SwiftUI
 struct FirstgradeView: View {
     var body: some View {
         VStack{
-            BottomView()
+            Text("FirstgradeView")
         }
     }
 }
