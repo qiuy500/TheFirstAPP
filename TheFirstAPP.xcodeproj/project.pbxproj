@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431562EB29555B7200FBB4FD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431562EA29555B7100FBB4FD /* TestView.swift */; };
 		E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B540294891CE00AF6FE6 /* FirstgradeView.swift */; };
 		E242B543294892A200AF6FE6 /* SencondgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B542294892A200AF6FE6 /* SencondgradeView.swift */; };
 		E242B545294895F700AF6FE6 /* ThirdgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B544294895F700AF6FE6 /* ThirdgradeView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		431562EA29555B7100FBB4FD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		E242B540294891CE00AF6FE6 /* FirstgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstgradeView.swift; sourceTree = "<group>"; };
 		E242B542294892A200AF6FE6 /* SencondgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SencondgradeView.swift; sourceTree = "<group>"; };
 		E242B544294895F700AF6FE6 /* ThirdgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdgradeView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				E242B540294891CE00AF6FE6 /* FirstgradeView.swift */,
 				E242B542294892A200AF6FE6 /* SencondgradeView.swift */,
 				E242B544294895F700AF6FE6 /* ThirdgradeView.swift */,
+				431562EA29555B7100FBB4FD /* TestView.swift */,
 			);
 			name = GradeView;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431562EB29555B7200FBB4FD /* TestView.swift in Sources */,
 				E242B5472948990B00AF6FE6 /* ToMaToView.swift in Sources */,
 				E242B545294895F700AF6FE6 /* ThirdgradeView.swift in Sources */,
 				E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */,
