@@ -10,7 +10,7 @@ import AVFoundation
 struct ToMaToView: View {
     @State var isRunning = false // 記錄定時器是否運行
     @State var timeRemaining = 0 // 記錄定時器的剩餘時間
-    @State var min = 0
+    @State var hour:String = "0"
     @State var sen = 0
     @State var x = 0
     @State var y = 0
@@ -19,11 +19,16 @@ struct ToMaToView: View {
     @State private var scale: Double = 300
     @State var audioPlayer: AVAudioPlayer!
     @State private var value: Double = 600
+    @State var startAngle:Double = 0
+    @State var toAngle:Double = 180
+    @State var width:CGFloat = 0
+    @State var startProgress:CGFloat = 0
+    @State var toProgress:CGFloat = 0.5
     let url = Bundle.main.url(forResource: "番茄鈴聲", withExtension: "mp3")
     @State var soundswitch = false
     var body: some View {
         
-        VStack {
+        /*VStack {
             // 定義一個文本標籤，用於顯示定時器的剩餘時間
             //Text("\(soundswitch)")
             //Text("x = \(x)")
@@ -121,19 +126,118 @@ struct ToMaToView: View {
             }.font(.custom("", size: 50))
             
             // 定義一個文本框，用於輸入定時器的時間
-            /*HStack {
-                Text("輸入分鐘")
-                TextField("輸入分鐘", value: $min, formatter: NumberFormatter())
-                    .keyboardType(.numberPad)
-                Text("輸入秒")
-                TextField("輸入秒", value: $sen, formatter: NumberFormatter())
-                    .keyboardType(.numberPad)
-            }*/
+
 
             
-            }
+            }*/
+        VStack{
+            tomato()
+            Circle()
+                .stroke(.black.opacity(0.06),lineWidth: 40)
+            Text("\(CGFloat(toProgress * 2))")
+                .padding()
+            TextField("輸入時間", text: $hour)
+            Text("剩餘時間：\(timeRemaining / 60) 分鐘\(timeRemaining - (timeRemaining / 60 * 60))秒")
+                .font(.largeTitle)
+                .padding(.bottom, 50)
+                .onReceive(timer) { _ in // 每次收到 timer 發送的事件時
+                    if isRunning{
+                        if self.timeRemaining > 0 { // 如果計時器還沒有結束
+                            self.timeRemaining -= 1 // 將剩餘時間減一秒
+                            if scale > 0{
+                                scale -= 1
+                            }
+                        }else{//計時器結束
+                            self.isRunning = false
+                            soundswitch = true //開叫
+                        }
+                    }else{
+                        //timeRemaining = min * 60 + sen
+                        hour = String(self.timeRemaining)
+                    }
+                }
+        }.frame(width: screenBounds().width / 1.6,height: screenBounds().width / 1.6)
+
         
         }
+    func tomato()->some View{
+        GeometryReader{proxy in
+            let width = proxy.size.width
+            ZStack{
+                ZStack{
+                    ForEach(1...60,id: \.self){index in
+                        Rectangle()
+                            .fill(index % 5 == 0 ? .black : .gray)
+                        // 60/5 = 12 hours
+                            .frame(width: 2,height: index % 5 == 0 ? 15 : 5)
+                            .offset(y: (width - 60) / 2)
+                            .rotationEffect(.init(degrees: Double(index) * 6))
+                    }
+                    let texts = [1,2]
+                    ForEach(texts.indices,id: \.self){index in
+                        Text("\(texts[index])")
+                            
+                            .font(.title3)
+                            .foregroundColor(.black)
+                            .rotationEffect(.init(degrees: Double(index) * 180))
+                            .offset(y: (width - 90) / 2)
+                        // 360 / 4 = 90
+                            .rotationEffect(.init(degrees: Double(index) * 180))
+                    }
+                }
+                Circle()
+                    .stroke(.black.opacity(0.06),lineWidth: 40)
+                let reverseRotation = (startProgress > toProgress) ? -Double((1 - startProgress) * 360) : 0
+                Circle()
+                    .trim(from: startProgress > toProgress ? 0 : startProgress,to: toProgress + (-reverseRotation / 360))
+                    .stroke(Color.orange,style: StrokeStyle(lineWidth: 40,lineCap: .round,lineJoin: .round))
+                    .rotationEffect(.init(degrees: -90))
+                    .rotationEffect(.init(degrees: reverseRotation))
+                
+                Image(systemName: "moon.fill")
+                    .font(.callout)
+                    .foregroundColor(Color.blue)
+                    .frame(width: 30,height: 30)
+                    .rotationEffect(.init(degrees: 90))
+                    .rotationEffect(.init(degrees: -toAngle))
+                    .background(.white,in:Circle())
+                    .offset(x: width / 2)
+                    .rotationEffect(.init(degrees: toAngle))
+                    .gesture(
+                        
+                        DragGesture()
+                            .onChanged({ value in
+                                onDrag(value: value,fromSlider: false)
+                            })
+                    )
+                    .rotationEffect(.init(degrees: -90))
+            }
+        }
+        .frame(width: screenBounds().width / 1.6,height: screenBounds().width / 1.6)
+    }
+
+    func onDrag(value: DragGesture.Value,fromSlider:Bool = false){
+        
+        let vector = CGVector(dx: value.location.x, dy: value.location.y)
+        // button diamter = 30
+        // radius = 15
+        let radians = atan2(vector.dy - 15, vector.dx - 15)
+        
+        var angle = radians * 180 / .pi
+        if angle < 0{
+            angle = 360 + angle
+        }
+        let progress = angle / 360
+        
+        if fromSlider{
+            self.startAngle = angle
+            self.startProgress = progress
+        }else{
+            self.toAngle = angle
+            self.toProgress = progress
+        }
+    }
+
     }
 
 
@@ -142,3 +246,11 @@ struct ToMaToView_Previews: PreviewProvider {
         ToMaToView()
     }
 }
+extension View{
+    func screenBounds()->CGRect{
+        return UIScreen.main.bounds
+    }
+}
+
+
+

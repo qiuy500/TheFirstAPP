@@ -82,7 +82,7 @@ struct TestView: View {
         GeometryReader{proxy in
             let width = proxy.size.width
             ZStack{
-                ZStack{
+                /*ZStack{
                     ForEach(1...60,id: \.self){index in
                         Rectangle()
                             .fill(index % 5 == 0 ? .black : .gray)
@@ -101,15 +101,15 @@ struct TestView: View {
                         // 360 / 4 = 90
                             .rotationEffect(.init(degrees: Double(index) * 90))
                     }
-                }
+                }*/
                 Circle()
                     .stroke(.black.opacity(0.06),lineWidth: 40)
                 let reverseRotation = (startProgress > toProgress) ? -Double((1 - startProgress) * 360) : 0
-                Circle()
+                /*Circle()
                     .trim(from: startProgress > toProgress ? 0 : startProgress,to: toProgress + (-reverseRotation / 360))
                     .stroke(Color.blue,style: StrokeStyle(lineWidth: 40,lineCap: .round,lineJoin: .round))
                     .rotationEffect(.init(degrees: -90))
-                    .rotationEffect(.init(degrees: reverseRotation))
+                    .rotationEffect(.init(degrees: reverseRotation))*/
                 
                 Image(systemName: "moon.fill")
                     .font(.callout)
@@ -225,8 +225,4 @@ struct TestView_Previews: PreviewProvider {
     }
 }
 
-extension View{
-    func screenBounds()->CGRect{
-        return UIScreen.main.bounds
-    }
-}
+
