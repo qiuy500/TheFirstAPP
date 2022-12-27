@@ -14,6 +14,7 @@ struct ToMaToView: View {
     @State var sen = 0
     @State var x = 0
     @State var y = 0
+    @State var stop = false
     @State var heidht:CGFloat = 50
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect() // 建立一個計時器
     @State private var scale: Double = 300
@@ -62,9 +63,11 @@ struct ToMaToView: View {
                             if scale > 0{
                                 scale -= 1
                             }
-                        }else{//計時器結束
+                        }else if stop == false{//計時器結束
                             self.isRunning = false
-                            soundswitch = true //開叫
+                            soundswitch = true
+                            
+                            //開叫
                         }
                     }else{
                         //timeRemaining = min * 60 + sen
@@ -93,6 +96,13 @@ struct ToMaToView: View {
                         }
                     }*/
                 }
+            Button {
+                soundswitch = false
+                stop = true
+            } label: {
+                Text("閉嘴")
+            }
+
             Button(action: {
                 if isRunning {
                     timeRemaining = Int(scale)
