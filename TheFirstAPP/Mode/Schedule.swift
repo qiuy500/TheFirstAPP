@@ -8,24 +8,42 @@
 import SwiftUI
 
 struct Schedule: View {
+    
     var columngrid :[GridItem] = [
         GridItem(.flexible(), spacing:1),
         GridItem(.flexible(), spacing:1)
-    
+        
     ]
     var testschedule :[String] =
-    ["a","b","c","d","e","f","g"]
+    ["chinese","math","english","physics","biology","chemical","sleep"]
     var body: some View {
+        
         VStack {
-            LazyVGrid(columns: columngrid){
-                ForEach(0...1002,id:\.self){
-                    Text(testschedule[$0 % testschedule.count])
+            NavigationView{
+                ScrollView{
+                    Text("What do you want to do? ")
+                    LazyVGrid(columns: columngrid){
+                        ForEach(0...6,id:\.self){index in
+                            NavigationLink{
+                                
+                                ScheduleList()
+                            }label: {
+                            
+                                    Image(testschedule[index % testschedule.count])
+                                        .resizable()
+                                        .frame(width: 200,height: 200)
+                                }
+                            
+                            
+                        }
+                        
+                        
+                    }
                 }
             }
         }
     }
 }
-
 struct Schedule_Previews: PreviewProvider {
     static var previews: some View {
         Schedule()

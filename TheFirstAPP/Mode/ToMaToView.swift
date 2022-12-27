@@ -126,7 +126,14 @@ struct ToMaToView: View {
             }.font(.custom("", size: 50))
             
             // 定義一個文本框，用於輸入定時器的時間
-
+            /*HStack {
+                Text("輸入分鐘")
+                TextField("輸入分鐘", value: $min, formatter: NumberFormatter())
+                    .keyboardType(.numberPad)
+                Text("輸入秒")
+                TextField("輸入秒", value: $sen, formatter: NumberFormatter())
+                    .keyboardType(.numberPad)
+            }*/
 
             
             }*/
@@ -212,6 +219,7 @@ struct ToMaToView: View {
                     )
                     .rotationEffect(.init(degrees: -90))
             }
+        
         }
         .frame(width: screenBounds().width / 1.6,height: screenBounds().width / 1.6)
     }
