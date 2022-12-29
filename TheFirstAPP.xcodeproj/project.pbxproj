@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		431562EB29555B7200FBB4FD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431562EA29555B7100FBB4FD /* TestView.swift */; };
+		4329B359295C8969008F5C38 /* Slider circuiar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329B358295C8969008F5C38 /* Slider circuiar.swift */; };
 		E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B540294891CE00AF6FE6 /* FirstgradeView.swift */; };
 		E242B543294892A200AF6FE6 /* SencondgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B542294892A200AF6FE6 /* SencondgradeView.swift */; };
 		E242B545294895F700AF6FE6 /* ThirdgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B544294895F700AF6FE6 /* ThirdgradeView.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		431562EA29555B7100FBB4FD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		4329B358295C8969008F5C38 /* Slider circuiar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider circuiar.swift"; sourceTree = "<group>"; };
 		E242B540294891CE00AF6FE6 /* FirstgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstgradeView.swift; sourceTree = "<group>"; };
 		E242B542294892A200AF6FE6 /* SencondgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SencondgradeView.swift; sourceTree = "<group>"; };
 		E242B544294895F700AF6FE6 /* ThirdgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdgradeView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4329B357295C8915008F5C38 /* tthe videos Example */ = {
+			isa = PBXGroup;
+			children = (
+				431562EA29555B7100FBB4FD /* TestView.swift */,
+				4329B358295C8969008F5C38 /* Slider circuiar.swift */,
+			);
+			path = "tthe videos Example";
+			sourceTree = "<group>";
+		};
 		E24C6792294CA7AE00D54E03 /* Mode */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +105,7 @@
 		E26FEADB2941730C00FDEAAF /* TheFirstAPP */ = {
 			isa = PBXGroup;
 			children = (
+				4329B357295C8915008F5C38 /* tthe videos Example */,
 				ECA771E72957EC9400BAE6C6 /* GoogleService-Info (1).plist */,
 				E2ED04FE2948AE52000A234B /* GradeView */,
 				E24C6792294CA7AE00D54E03 /* Mode */,
@@ -120,7 +132,6 @@
 				E242B540294891CE00AF6FE6 /* FirstgradeView.swift */,
 				E242B542294892A200AF6FE6 /* SencondgradeView.swift */,
 				E242B544294895F700AF6FE6 /* ThirdgradeView.swift */,
-				431562EA29555B7100FBB4FD /* TestView.swift */,
 			);
 			name = GradeView;
 			sourceTree = "<group>";
@@ -204,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				431562EB29555B7200FBB4FD /* TestView.swift in Sources */,
+				4329B359295C8969008F5C38 /* Slider circuiar.swift in Sources */,
 				E242B5472948990B00AF6FE6 /* ToMaToView.swift in Sources */,
 				E242B545294895F700AF6FE6 /* ThirdgradeView.swift in Sources */,
 				E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */,
