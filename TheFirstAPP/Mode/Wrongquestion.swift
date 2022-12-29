@@ -9,10 +9,17 @@ import SwiftUI
 
 struct Wrongquestion: View {
     var body: some View {
-        Text("Wrongquestion")
+        VStack{
+            List{
+                Text("1")
+                Text("1")
+                Text("1")
+            }
+        
+
     }
 }
-
+}
 struct Wrongquestion_Previews: PreviewProvider {
     static var previews: some View {
         Wrongquestion()
