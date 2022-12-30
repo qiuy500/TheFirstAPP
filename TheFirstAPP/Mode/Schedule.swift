@@ -28,11 +28,11 @@ struct Schedule: View {
                                 
                                 ScheduleList()
                             }label: {
-                            
-                                    Image(testschedule[index % testschedule.count])
-                                        .resizable()
-                                        .frame(width: 200,height: 200)
-                                }
+                                
+                                Image(testschedule[index % testschedule.count])
+                                    .resizable()
+                                    .frame(width: 200,height: 200)
+                            }
                             
                             
                         }

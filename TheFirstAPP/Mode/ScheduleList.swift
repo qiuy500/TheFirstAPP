@@ -11,18 +11,16 @@ struct ScheduleList: View {
     @State private var backgroundColor = Color.gray
     @State var note = ""
     let colors:[Color]  = [.gray,.red]
-    var ListNumber : [String] = ["1:00","2:00","3:00","4:00","5:00","6:00","7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00","24:00"]
+    let colors1:[Color]  = [.gray,.red]
     var body: some View {
         VStack{
             List{
+                Text("1:00")
+                Text("")
+               
+                   
                 
-                ForEach( 0...23,id:\.self){
-                    Text(ListNumber[$0 % ListNumber.count])
-                        .background(backgroundColor)
-                    
-                }
-                .onTapGesture(count: 1) {
-                    backgroundColor = colors.randomElement()!
+                
                 }
             }
         }
