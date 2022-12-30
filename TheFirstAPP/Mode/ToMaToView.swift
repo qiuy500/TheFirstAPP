@@ -9,7 +9,7 @@ import SwiftUI
 import AVFoundation
 struct ToMaToView: View {
     @State var isRunning = false // 記錄定時器是否運行
-    @State private var timeRemaining = 0 // 記錄定時器的剩餘時間
+    @State private var timeRemaining = 600 // 記錄定時器的剩餘時間
     @State var hour:String = "0"
     @State var heidht:CGFloat = 50
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect() // 建立一個計時器
@@ -134,6 +134,7 @@ struct ToMaToView: View {
          
          
          }*/
+        
         VStack{
             tomato()
             Circle()
@@ -149,7 +150,7 @@ struct ToMaToView: View {
                 }
             }))
             .keyboardType(.numberPad)
-            Text("剩餘時間：\(timeRemaining * 60) 分鐘\(timeRemaining - (timeRemaining / 60 * 60))秒")
+            Text("剩餘時間：\(timeRemaining / 60) 分鐘\(timeRemaining - (timeRemaining / 60 * 60))秒")
             //.font(.largeTitle)
                 .padding(.bottom, 50)
                 .onReceive(timer) { _ in // 每次收到 timer 發送的事件時

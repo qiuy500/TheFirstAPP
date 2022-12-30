@@ -10,10 +10,9 @@ import SwiftUI
 struct Wrongquestion: View {
     
     var body: some View {
-        Text("Wrongquestion")
-            .onTapGesture{
-                
-            }
+        List{
+            Text("Wrongquestion")
+        }
     }
 }
 
