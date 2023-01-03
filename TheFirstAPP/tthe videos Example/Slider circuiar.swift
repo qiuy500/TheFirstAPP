@@ -75,18 +75,24 @@ struct Home : View {
     @State var size = UIScreen.main.bounds.width - 100
     @State var progress : CGFloat = 0
     @State var angle : Double = 0
-    @State var Hour = 0
-    @State var mon = 0
-    @State var time = 0
+    @State var hourtime:String = "0"
+    @State var minstime:String = "0"
     var body: some View{
-        
         VStack{
-
-            Text("\(String(format: "%.1f", angle / 360 * 2))")
+            let totalTime = round(progress * 10000) / 10000 * 2 * 60 * 60
+            let Hours = Int(totalTime / 60 / 60)
+            let Mins = Int(totalTime / 60) - Hours * 60
+            Text("Timeround\(totalTime)")
+            Text("Hours: \(Hours)")
                 .padding()
-            Text("Hours: \(String(format: "%.0f", progress * 2)) ")
+            Text("Mins: \(Mins) ")
                 .padding()
-        //min: \(CGFloat(format: "%.0f", progress * 2) - String(format: "%.1f", progress * 2))
+            TextField("Hours", text: $hourtime)
+                .keyboardType(.numberPad)
+            TextField("Mins", text: $minstime)
+                .keyboardType(.numberPad)
+            
+            let enteredTime = (Int(hourtime) ?? 0) * 60 * 60 + (Int(minstime) * 60 ?? 0)
             
             ZStack{
                 
@@ -157,8 +163,8 @@ struct Home : View {
             // progress...
             let progress = angle / 360
             self.progress = progress
+            //self.progress = enteredTime / 60 / 60 / 2
             self.angle = Double(angle)
-            let time = angle//progress * 2
 
         }
     }

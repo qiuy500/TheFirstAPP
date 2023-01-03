@@ -104,7 +104,7 @@ struct TestView: View {
                 }*/
                 Circle()
                     .stroke(.black.opacity(0.06),lineWidth: 40)
-                let reverseRotation = (startProgress > toProgress) ? -Double((1 - startProgress) * 360) : 0
+                //let reverseRotation = (startProgress > toProgress) ? -Double((1 - startProgress) * 360) : 0
                 /*Circle()
                     .trim(from: startProgress > toProgress ? 0 : startProgress,to: toProgress + (-reverseRotation / 360))
                     .stroke(Color.blue,style: StrokeStyle(lineWidth: 40,lineCap: .round,lineJoin: .round))
