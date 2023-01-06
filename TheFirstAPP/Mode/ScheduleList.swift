@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ScheduleList: View {
+    var subject : [String] =
+    ["1:00","2:00","3:00","4:00","5:00","6:00","7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","23:00","24:00"]
     @State private var backgroundColor1 = Color.gray
     @State private var backgroundColor2 = Color.gray
     @State private var backgroundColor3 = Color.gray
@@ -83,65 +85,24 @@ struct ScheduleList: View {
     var body: some View {
         VStack{
             List{
-                
-                Text("1:00")
-                    .foregroundColor(backgroundColor1)
-                    .onTapGesture(count: 1) {
-                        backgroundColor1 = colors1.randomElement()!
-                    }
-            
-                Text("2:00")
-                    .foregroundColor(backgroundColor2)
-                    .onTapGesture(count: 1) {
-                        backgroundColor2 = colors2.randomElement()!
-                    }
-                Text("2:00")
-                    .foregroundColor(backgroundColor3)
-                    .onTapGesture(count: 1) {
-                        backgroundColor3 = colors3.randomElement()!
-                    }
-                Text("1:00")
-                    .foregroundColor(backgroundColor4)
-                    .onTapGesture(count: 1) {
-                        backgroundColor4 = colors4.randomElement()!
-                    }
-                Text("1:00")
-                    .foregroundColor(backgroundColor5)
-                    .onTapGesture(count: 1) {
-                        backgroundColor5 = colors5.randomElement()!
-                    }
-                Text("1:00")
-                    .foregroundColor(backgroundColor6)
-                    .onTapGesture(count: 1) {
-                        backgroundColor6 = colors6.randomElement()!
-                    }
-                Text("1:00")
-                    .foregroundColor(backgroundColor7)
-                    .onTapGesture(count: 1) {
-                        backgroundColor7 = colors7.randomElement()!
-                    }
-                Text("1:00")
-                    .foregroundColor(backgroundColor8)
-                    .onTapGesture(count: 1) {
-                        backgroundColor8 = colors8.randomElement()!
-                    }
-                Text("1:00")
-                    .foregroundColor(backgroundColor9)
-                    .onTapGesture(count: 1) {
-                        backgroundColor9 = colors9.randomElement()!
-                    }
-               ScheduleList2()
-               
+                ForEach(0...10,id: \.self){index in
+                    Text("\(index % subject.count)")
+                    
+                }
                 
                 }
             }
         }
     }
-
-
-struct ScheduleList_Previews: PreviewProvider {
-    static var previews: some View {
-        ScheduleList()
+/*func Lighttime() {
+    .foregroundColor(backgroundColor8)
+    .onTapGesture(count: 1) {
     }
-}
+    */
+    struct ScheduleList_Previews: PreviewProvider {
+        static var previews: some View {
+            ScheduleList()
+        }
+    }
+    
 

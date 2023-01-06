@@ -8,7 +8,7 @@
 
 
 //載入圖片第一種方式
-/*
+
 import SwiftUI
 import Firebase
 import FirebaseStorage
@@ -26,14 +26,12 @@ extension UIImage {
 }
 
 class StudentManager: ObservableObject {
-    @Published var students:[Student] = []
+   
     @Published var myPics:[String] = []
     
     let storage = Storage.storage()
     
-    init(){
-        fetechStudents()
-    }
+    
     
     //FireStorage
     
@@ -50,71 +48,72 @@ class StudentManager: ObservableObject {
         
         //上傳
         if let data = data {
-                storageRef.putData(data, metadata: metadata) { (metadata, error) in
-                        if let error = error {
-                                print("Error while uploading file: ", error)
-                        }
-
-                        if let metadata = metadata {
-                                print("Metadata: ", metadata)
-                        }
+            storageRef.putData(data, metadata: metadata) { (metadata, error) in
+                if let error = error {
+                    print("Error while uploading file: ", error)
                 }
+                
+                if let metadata = metadata {
+                    print("Metadata: ", metadata)
+                }
+            }
         }
     }
     
     func listAllFiles(){
         myPics.removeAll()
-            // Create a reference
-            let storageRef = storage.reference().child("\(Auth.auth().currentUser?.uid.description ?? "image")")
-
-            // List all items in the images folder
-            storageRef.listAll { (result, error) in
-              if let error = error {
+        // Create a reference
+        let storageRef = storage.reference().child("\(Auth.auth().currentUser?.uid.description ?? "image")")
+        
+        // List all items in the images folder
+        storageRef.listAll { (result, error) in
+            if let error = error {
                 print("Error while listing all files: ", error)
-              }
-
-                for item in result!.items {
-                    item.downloadURL { url, err in
-                        if err != nil {
-                            print("err")
-                        }
-                        
-                        self.myPics.append(url?.absoluteString ?? "")
+            }
+            
+            for item in result!.items {
+                item.downloadURL { url, err in
+                    if err != nil {
+                        print("err")
                     }
                     
+                    self.myPics.append(url?.absoluteString ?? "")
+                }
+                
                 print("Item in images folder: ", item)
-              }
             }
         }
+    }
     
     func deleteItem(url: String) {
-            storage.reference(forURL: url).delete { error in
-                if let error = error {
-                    print("Error deleting item", error)
-                }
-                self.listAllFiles()
+        storage.reference(forURL: url).delete { error in
+            if let error = error {
+                print("Error deleting item", error)
             }
+            self.listAllFiles()
         }
+    }
     
     //FireBase CRUD
-class FImageLoader: ObservableObject {
-    
-    var didChange = PassthroughSubject<Data, Never>()
-    var data = Data() {
-        didSet {
-            didChange.send(data)
-        }
-    }
-
-    init(urlString:String) {
-        guard let url = URL(string: urlString) else { return }
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data else { return }
-            DispatchQueue.main.async {
-                self.data = data
+    class FImageLoader: ObservableObject {
+        
+        var didChange = PassthroughSubject<Data, Never>()
+        var data = Data() {
+            didSet {
+                didChange.send(data)
             }
         }
-        task.resume()
+        
+        init(urlString:String) {
+            guard let url = URL(string: urlString) else { return }
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data else { return }
+                DispatchQueue.main.async {
+                    self.data = data
+                }
+            }
+            task.resume()
+        }
     }
+    
 }
-*/
