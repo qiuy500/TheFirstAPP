@@ -77,11 +77,13 @@ struct Home : View {
     @State var angle : Double = 0
     @State var hourtime:String = "0"
     @State var minstime:String = "0"
+    @State var totalTime:CGFloat = 0
+    @State var Hours = 0
+    @State var Mins = 0
+    //let enteredTime = (Int(hourtime) ?? 0) * 60 * 60 + (Int(minstime) * 60 ?? 0)
+
     var body: some View{
         VStack{
-            let totalTime = round(progress * 10000) / 10000 * 2 * 60 * 60
-            let Hours = Int(totalTime / 60 / 60)
-            let Mins = Int(totalTime / 60) - Hours * 60
             Text("Timeround\(totalTime)")
             Text("Hours: \(Hours)")
                 .padding()
@@ -92,8 +94,7 @@ struct Home : View {
             TextField("Mins", text: $minstime)
                 .keyboardType(.numberPad)
             
-            let enteredTime = (Int(hourtime) ?? 0) * 60 * 60 + (Int(minstime) * 60 ?? 0)
-            
+
             ZStack{
                 
                 Circle()
@@ -132,6 +133,10 @@ struct Home : View {
                     .font(.largeTitle)
                     .fontWeight(.heavy)
             }
+        }.onAppear{
+            totalTime = round(progress * 10000) / 10000 * 2 * 60 * 60
+            Hours = Int(totalTime / 60 / 60)
+            Mins = Int(totalTime / 60) - Hours * 60
         }
     }
     
@@ -161,11 +166,13 @@ struct Home : View {
         withAnimation(Animation.linear(duration: 0.15)){
             
             // progress...
-            let progress = angle / 360
-            self.progress = progress
+            let onDragprogress = angle / 360
+            progress = onDragprogress
             //self.progress = enteredTime / 60 / 60 / 2
             self.angle = Double(angle)
-
+            totalTime = round(progress * 10000) / 10000 * 2 * 60 * 60
+            Hours = Int(totalTime / 60 / 60)
+            Mins = Int(totalTime / 60) - Hours * 60
         }
     }
 }

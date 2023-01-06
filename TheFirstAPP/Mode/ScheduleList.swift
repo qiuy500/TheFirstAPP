@@ -130,7 +130,7 @@ struct ScheduleList: View {
                     .onTapGesture(count: 1) {
                         backgroundColor9 = colors9.randomElement()!
                     }
-               ScheduleList2()
+               ScheduleList()
                
                 
                 }
