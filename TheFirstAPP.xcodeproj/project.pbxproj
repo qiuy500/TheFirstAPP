@@ -33,6 +33,7 @@
 		ECA956802964663B007408FF /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECA9567F2964663B007408FF /* FirebaseFirestoreSwift */; };
 		ECA956822964664D007408FF /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = ECA956812964664D007408FF /* FirebaseStorageCombine-Community */; };
 		ECA9568429646682007408FF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ECA9568329646682007408FF /* FirebaseStorage */; };
+		ECA9568629690A44007408FF /* ScheduleListMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9568529690A43007408FF /* ScheduleListMain.swift */; };
 		ECB6086B2950A3120052AF45 /* 番茄鈴聲.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECB6086A2950A3120052AF45 /* 番茄鈴聲.mp3 */; };
 		ECDC0DB42958362200886B3F /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDC0DB32958362200886B3F /* ScheduleList.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		ECA956722962EE39007408FF /* LoagImg */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoagImg; sourceTree = "<group>"; };
 		ECA956742962EEC4007408FF /* AddImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImage.swift; sourceTree = "<group>"; };
 		ECA956762962F4D8007408FF /* ScheduleList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList2.swift; sourceTree = "<group>"; };
+		ECA9568529690A43007408FF /* ScheduleListMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListMain.swift; sourceTree = "<group>"; };
 		ECB6086A2950A3120052AF45 /* 番茄鈴聲.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "番茄鈴聲.mp3"; sourceTree = "<group>"; };
 		ECDC0DB32958362200886B3F /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 				E242B5482948997700AF6FE6 /* Multiplechoice.swift */,
 				E242B54A294899B700AF6FE6 /* Schedule.swift */,
 				ECDC0DB32958362200886B3F /* ScheduleList.swift */,
+				ECA9568529690A43007408FF /* ScheduleListMain.swift */,
 				ECA956762962F4D8007408FF /* ScheduleList2.swift */,
 				EC1E8659295964060097CA84 /* ScheduleView.swift */,
 				E242B54C29489C2F00AF6FE6 /* Wrongquestion.swift */,
@@ -257,6 +260,7 @@
 				E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */,
 				ECA956752962EEC4007408FF /* AddImage.swift in Sources */,
 				ECA956772962F4D8007408FF /* ScheduleList2.swift in Sources */,
+				ECA9568629690A44007408FF /* ScheduleListMain.swift in Sources */,
 				E242B543294892A200AF6FE6 /* SencondgradeView.swift in Sources */,
 				E26FEADF2941730C00FDEAAF /* ContentView.swift in Sources */,
 				E24C6791294B1C6C00D54E03 /* HomeView.swift in Sources */,
