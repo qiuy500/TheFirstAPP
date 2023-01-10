@@ -23,6 +23,8 @@
 		E26FEAE12941731000FDEAAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26FEAE02941731000FDEAAF /* Assets.xcassets */; };
 		E26FEAE42941731000FDEAAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26FEAE32941731000FDEAAF /* Preview Assets.xcassets */; };
 		EC1E865A295964060097CA84 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E8659295964060097CA84 /* ScheduleView.swift */; };
+		EC2365D0296D05F500C34D43 /* Wrongquestiontitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2365CF296D05F500C34D43 /* Wrongquestiontitle.swift */; };
+		EC2365D2296D076700C34D43 /* Wrongmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2365D1296D076700C34D43 /* Wrongmanager.swift */; };
 		EC634F49295E988700996CA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC634F48295E988700996CA6 /* GoogleService-Info.plist */; };
 		ECA956732962EE39007408FF /* LoagImg in Resources */ = {isa = PBXBuildFile; fileRef = ECA956722962EE39007408FF /* LoagImg */; };
 		ECA956752962EEC4007408FF /* AddImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA956742962EEC4007408FF /* AddImage.swift */; };
@@ -34,6 +36,8 @@
 		ECA956822964664D007408FF /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = ECA956812964664D007408FF /* FirebaseStorageCombine-Community */; };
 		ECA9568429646682007408FF /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ECA9568329646682007408FF /* FirebaseStorage */; };
 		ECA9568629690A44007408FF /* ScheduleListMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9568529690A43007408FF /* ScheduleListMain.swift */; };
+		ECA9568A296A9B10007408FF /* NewStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA95689296A9B10007408FF /* NewStudent.swift */; };
+		ECA9568C296C42F1007408FF /* ImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9568B296C42F1007408FF /* ImageTest.swift */; };
 		ECB6086B2950A3120052AF45 /* 番茄鈴聲.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECB6086A2950A3120052AF45 /* 番茄鈴聲.mp3 */; };
 		ECDC0DB42958362200886B3F /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDC0DB32958362200886B3F /* ScheduleList.swift */; };
 /* End PBXBuildFile section */
@@ -56,11 +60,15 @@
 		E26FEAE02941731000FDEAAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E26FEAE32941731000FDEAAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC1E8659295964060097CA84 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		EC2365CF296D05F500C34D43 /* Wrongquestiontitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrongquestiontitle.swift; sourceTree = "<group>"; };
+		EC2365D1296D076700C34D43 /* Wrongmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrongmanager.swift; sourceTree = "<group>"; };
 		EC634F48295E988700996CA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECA956722962EE39007408FF /* LoagImg */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoagImg; sourceTree = "<group>"; };
 		ECA956742962EEC4007408FF /* AddImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImage.swift; sourceTree = "<group>"; };
 		ECA956762962F4D8007408FF /* ScheduleList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList2.swift; sourceTree = "<group>"; };
 		ECA9568529690A43007408FF /* ScheduleListMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListMain.swift; sourceTree = "<group>"; };
+		ECA95689296A9B10007408FF /* NewStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStudent.swift; sourceTree = "<group>"; };
+		ECA9568B296C42F1007408FF /* ImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTest.swift; sourceTree = "<group>"; };
 		ECB6086A2950A3120052AF45 /* 番茄鈴聲.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "番茄鈴聲.mp3"; sourceTree = "<group>"; };
 		ECDC0DB32958362200886B3F /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,13 +105,16 @@
 				ECB6086A2950A3120052AF45 /* 番茄鈴聲.mp3 */,
 				E242B5462948990B00AF6FE6 /* ToMaToView.swift */,
 				E242B5482948997700AF6FE6 /* Multiplechoice.swift */,
+				ECA9568529690A43007408FF /* ScheduleListMain.swift */,
 				E242B54A294899B700AF6FE6 /* Schedule.swift */,
 				ECDC0DB32958362200886B3F /* ScheduleList.swift */,
-				ECA9568529690A43007408FF /* ScheduleListMain.swift */,
 				ECA956762962F4D8007408FF /* ScheduleList2.swift */,
 				EC1E8659295964060097CA84 /* ScheduleView.swift */,
 				E242B54C29489C2F00AF6FE6 /* Wrongquestion.swift */,
+				EC2365CF296D05F500C34D43 /* Wrongquestiontitle.swift */,
+				EC2365D1296D076700C34D43 /* Wrongmanager.swift */,
 				E24C6790294B1C6C00D54E03 /* HomeView.swift */,
+				ECA9568B296C42F1007408FF /* ImageTest.swift */,
 				ECA956742962EEC4007408FF /* AddImage.swift */,
 			);
 			path = Mode;
@@ -114,7 +125,7 @@
 			children = (
 				E26FEADB2941730C00FDEAAF /* TheFirstAPP */,
 				E26FEADA2941730C00FDEAAF /* Products */,
-				ECA9567829646552007408FF /* Frameworks */,
+				ECA9567829646552007408FF /* Firebase */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,7 +147,6 @@
 				E26FEADC2941730C00FDEAAF /* TheFirstAPPApp.swift */,
 				E24C678E294B16A900D54E03 /* BottomView.swift */,
 				E26FEADE2941730C00FDEAAF /* ContentView.swift */,
-				ECA956722962EE39007408FF /* LoagImg */,
 				E26FEAE02941731000FDEAAF /* Assets.xcassets */,
 				E26FEAE22941731000FDEAAF /* Preview Content */,
 			);
@@ -161,11 +171,13 @@
 			name = GradeView;
 			sourceTree = "<group>";
 		};
-		ECA9567829646552007408FF /* Frameworks */ = {
+		ECA9567829646552007408FF /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				ECA956722962EE39007408FF /* LoagImg */,
+				ECA95689296A9B10007408FF /* NewStudent.swift */,
 			);
-			name = Frameworks;
+			name = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +266,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				431562EB29555B7200FBB4FD /* TestView.swift in Sources */,
+				EC2365D2296D076700C34D43 /* Wrongmanager.swift in Sources */,
 				4329B359295C8969008F5C38 /* Slider circuiar.swift in Sources */,
 				E242B5472948990B00AF6FE6 /* ToMaToView.swift in Sources */,
+				ECA9568A296A9B10007408FF /* NewStudent.swift in Sources */,
 				E242B545294895F700AF6FE6 /* ThirdgradeView.swift in Sources */,
+				ECA9568C296C42F1007408FF /* ImageTest.swift in Sources */,
 				E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */,
 				ECA956752962EEC4007408FF /* AddImage.swift in Sources */,
 				ECA956772962F4D8007408FF /* ScheduleList2.swift in Sources */,
@@ -267,6 +282,7 @@
 				E242B54D29489C2F00AF6FE6 /* Wrongquestion.swift in Sources */,
 				E242B5492948997700AF6FE6 /* Multiplechoice.swift in Sources */,
 				E242B54B294899B700AF6FE6 /* Schedule.swift in Sources */,
+				EC2365D0296D05F500C34D43 /* Wrongquestiontitle.swift in Sources */,
 				E26FEADD2941730C00FDEAAF /* TheFirstAPPApp.swift in Sources */,
 				ECDC0DB42958362200886B3F /* ScheduleList.swift in Sources */,
 				EC1E865A295964060097CA84 /* ScheduleView.swift in Sources */,

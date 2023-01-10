@@ -15,7 +15,7 @@ struct BottomView: View {
                     .tabItem{
                         Image(systemName: "clock")
                     }
-                Schedule()
+                ScheduleListMain()
                     .tabItem{
                         Image(systemName: "list.clipboard")
                     }
