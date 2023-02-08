@@ -11,7 +11,7 @@ import PhotosUI
 
 @available(iOS 16.0, *)
 struct ImageTest: View {
-    @EnvironmentObject var studentManager:StudentManager
+    @EnvironmentObject var studentManager:AddImage
     
     //@EnvironmentObject var tryimage: AsyncImage
     @State private var selectedItem: PhotosPickerItem?
@@ -20,6 +20,7 @@ struct ImageTest: View {
     @State var showImg = false
     var body: some View {
         VStack {
+            Text("0101010001")
             HStack{
                 PhotosPicker(selection: $selectedItem, matching: .images) {
                     Label("選擇相片", systemImage: "photo")
@@ -33,7 +34,7 @@ struct ImageTest: View {
                     }
                     
                 }
-                
+
             }.padding(.horizontal, 20)
             
             if var selectedPhotoData,
@@ -43,14 +44,14 @@ struct ImageTest: View {
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFill()
-                            .clipped()
+                        .clipped()
                         Button {
                             showImg = false
                             studentManager.listAllFiles()
                         } label: {
                             Text("確定")
                         }
-                        
+
                     }
                 }
             }
@@ -67,7 +68,7 @@ struct ImageTest: View {
                             } label: {
                                 Text("刪除")
                             }
-                            
+
                         }
                     }
                 }
@@ -76,12 +77,13 @@ struct ImageTest: View {
             }
             Text("\(studentManager.myPics.count)")
         }
+
     }
 }
 struct ImageTest_Previews: PreviewProvider {
     static var previews: some View {
         if #available(iOS 16.0, *) {
-            ImageTest().environmentObject(StudentManager())
+            ImageTest().environmentObject(AddImage())
         }
     }
 }

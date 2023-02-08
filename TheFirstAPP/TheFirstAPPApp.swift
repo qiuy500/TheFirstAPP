@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct TheFirstAPPApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject var studentManager = AddImage()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if #available(iOS 16.0, *) {
+                ImageTest().environmentObject(studentManager)
+            } else {
+                // Fallback on earlier versions
+            }
+            //ContentView()
         }
     }
 }
