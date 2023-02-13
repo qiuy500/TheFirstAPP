@@ -10,7 +10,9 @@
 		431562EB29555B7200FBB4FD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431562EA29555B7100FBB4FD /* TestView.swift */; };
 		4329B359295C8969008F5C38 /* Slider circuiar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329B358295C8969008F5C38 /* Slider circuiar.swift */; };
 		433594C6298A399400598DFD /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433594C5298A399400598DFD /* Student.swift */; };
-		438CDA6C298A5E880094BA51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 438CDA6B298A5E880094BA51 /* GoogleService-Info.plist */; };
+		4347FEB42999DF45002F9196 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4347FEB32999DF45002F9196 /* GoogleService-Info.plist */; };
+		4347FEB62999E058002F9196 /* Multiplechoicemanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FEB52999E058002F9196 /* Multiplechoicemanager.swift */; };
+		4347FEB82999E0A6002F9196 /* Multiplechoicesetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FEB72999E0A6002F9196 /* Multiplechoicesetting.swift */; };
 		43BF1A7F297ECF8E00BDC7E0 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BF1A7E297ECF8E00BDC7E0 /* ImageView.swift */; };
 		43E523A7298E34CA00C3A457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E523A6298E34CA00C3A457 /* AppDelegate.swift */; };
 		E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B540294891CE00AF6FE6 /* FirstgradeView.swift */; };
@@ -49,7 +51,9 @@
 		431562EA29555B7100FBB4FD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		4329B358295C8969008F5C38 /* Slider circuiar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider circuiar.swift"; sourceTree = "<group>"; };
 		433594C5298A399400598DFD /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
-		438CDA6B298A5E880094BA51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4347FEB32999DF45002F9196 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4347FEB52999E058002F9196 /* Multiplechoicemanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplechoicemanager.swift; sourceTree = "<group>"; };
+		4347FEB72999E0A6002F9196 /* Multiplechoicesetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplechoicesetting.swift; sourceTree = "<group>"; };
 		43BF1A7E297ECF8E00BDC7E0 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		43E523A6298E34CA00C3A457 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E242B540294891CE00AF6FE6 /* FirstgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstgradeView.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				ECB6086A2950A3120052AF45 /* 番茄鈴聲.mp3 */,
 				E242B5462948990B00AF6FE6 /* ToMaToView.swift */,
 				E242B5482948997700AF6FE6 /* Multiplechoice.swift */,
+				4347FEB52999E058002F9196 /* Multiplechoicemanager.swift */,
+				4347FEB72999E0A6002F9196 /* Multiplechoicesetting.swift */,
 				ECA9568529690A43007408FF /* ScheduleListMain.swift */,
 				E242B54A294899B700AF6FE6 /* Schedule.swift */,
 				ECDC0DB32958362200886B3F /* ScheduleList.swift */,
@@ -149,7 +155,7 @@
 		E26FEADB2941730C00FDEAAF /* TheFirstAPP */ = {
 			isa = PBXGroup;
 			children = (
-				438CDA6B298A5E880094BA51 /* GoogleService-Info.plist */,
+				4347FEB32999DF45002F9196 /* GoogleService-Info.plist */,
 				4329B357295C8915008F5C38 /* tthe videos Example */,
 				E2ED04FE2948AE52000A234B /* GradeView */,
 				E24C6792294CA7AE00D54E03 /* Mode */,
@@ -261,7 +267,7 @@
 			files = (
 				ECA956732962EE39007408FF /* LoagImg in Resources */,
 				ECB6086B2950A3120052AF45 /* 番茄鈴聲.mp3 in Resources */,
-				438CDA6C298A5E880094BA51 /* GoogleService-Info.plist in Resources */,
+				4347FEB42999DF45002F9196 /* GoogleService-Info.plist in Resources */,
 				E26FEAE42941731000FDEAAF /* Preview Assets.xcassets in Resources */,
 				E26FEAE12941731000FDEAAF /* Assets.xcassets in Resources */,
 			);
@@ -278,6 +284,7 @@
 				EC2365D2296D076700C34D43 /* Wrongmanager.swift in Sources */,
 				4329B359295C8969008F5C38 /* Slider circuiar.swift in Sources */,
 				E242B5472948990B00AF6FE6 /* ToMaToView.swift in Sources */,
+				4347FEB62999E058002F9196 /* Multiplechoicemanager.swift in Sources */,
 				ECA9568A296A9B10007408FF /* NewStudent.swift in Sources */,
 				E242B545294895F700AF6FE6 /* ThirdgradeView.swift in Sources */,
 				ECA9568C296C42F1007408FF /* ImageTest.swift in Sources */,
@@ -286,6 +293,7 @@
 				ECA956752962EEC4007408FF /* AddImage.swift in Sources */,
 				ECA956772962F4D8007408FF /* ScheduleList2.swift in Sources */,
 				ECA9568629690A44007408FF /* ScheduleListMain.swift in Sources */,
+				4347FEB82999E0A6002F9196 /* Multiplechoicesetting.swift in Sources */,
 				E242B543294892A200AF6FE6 /* SencondgradeView.swift in Sources */,
 				43E523A7298E34CA00C3A457 /* AppDelegate.swift in Sources */,
 				43BF1A7F297ECF8E00BDC7E0 /* ImageView.swift in Sources */,
@@ -443,7 +451,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.thefirstapp.demo.TheFirstAPP;
+				PRODUCT_BUNDLE_IDENTIFIER = app.cherrystudio.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -473,7 +481,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.thefirstapp.demo.TheFirstAPP;
+				PRODUCT_BUNDLE_IDENTIFIER = app.cherrystudio.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

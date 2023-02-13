@@ -14,7 +14,7 @@ struct TheFirstAPPApp: App {
     var body: some Scene {
         WindowGroup {
             if #available(iOS 16.0, *) {
-                ImageTest().environmentObject(studentManager)
+                Wrongquestion().environmentObject(studentManager)
             } else {
                 // Fallback on earlier versions
             }
