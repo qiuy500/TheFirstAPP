@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BottomView: View {
+    @EnvironmentObject var Mm :Multplechoicemanager
+
     var body: some View {
         VStack {
             TabView{
@@ -23,7 +25,7 @@ struct BottomView: View {
                     .tabItem{
                         Image(systemName: "house")
                     }
-                Multiplechoice()
+                Multiplechoice().environmentObject(Multplechoicemanager())
                     .tabItem{
                         Image(systemName: "pencil.line")
                     }

@@ -13,6 +13,12 @@
 		4347FEB62999E058002F9196 /* Multiplechoicemanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FEB52999E058002F9196 /* Multiplechoicemanager.swift */; };
 		4347FEB82999E0A6002F9196 /* Multiplechoicesetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FEB72999E0A6002F9196 /* Multiplechoicesetting.swift */; };
 		436BC193299B309A00F6C980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 436BC192299B309A00F6C980 /* GoogleService-Info.plist */; };
+		436BC195299B814C00F6C980 /* MainMultiplechoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BC194299B814C00F6C980 /* MainMultiplechoice.swift */; };
+		436BC19B299B826400F6C980 /* ChoiceA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BC19A299B826400F6C980 /* ChoiceA.swift */; };
+		436BC19D299B828300F6C980 /* ChoiceB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BC19C299B828300F6C980 /* ChoiceB.swift */; };
+		436BC19F299B82A400F6C980 /* ChoiceC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BC19E299B82A400F6C980 /* ChoiceC.swift */; };
+		436BC1A1299B82BB00F6C980 /* ChoiceD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BC1A0299B82BB00F6C980 /* ChoiceD.swift */; };
+		436BC1A3299B82D400F6C980 /* ChoiceE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BC1A2299B82D400F6C980 /* ChoiceE.swift */; };
 		43BF1A7F297ECF8E00BDC7E0 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BF1A7E297ECF8E00BDC7E0 /* ImageView.swift */; };
 		43E523A7298E34CA00C3A457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E523A6298E34CA00C3A457 /* AppDelegate.swift */; };
 		E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B540294891CE00AF6FE6 /* FirstgradeView.swift */; };
@@ -54,6 +60,12 @@
 		4347FEB52999E058002F9196 /* Multiplechoicemanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplechoicemanager.swift; sourceTree = "<group>"; };
 		4347FEB72999E0A6002F9196 /* Multiplechoicesetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplechoicesetting.swift; sourceTree = "<group>"; };
 		436BC192299B309A00F6C980 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		436BC194299B814C00F6C980 /* MainMultiplechoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMultiplechoice.swift; sourceTree = "<group>"; };
+		436BC19A299B826400F6C980 /* ChoiceA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceA.swift; sourceTree = "<group>"; };
+		436BC19C299B828300F6C980 /* ChoiceB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceB.swift; sourceTree = "<group>"; };
+		436BC19E299B82A400F6C980 /* ChoiceC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceC.swift; sourceTree = "<group>"; };
+		436BC1A0299B82BB00F6C980 /* ChoiceD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceD.swift; sourceTree = "<group>"; };
+		436BC1A2299B82D400F6C980 /* ChoiceE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceE.swift; sourceTree = "<group>"; };
 		43BF1A7E297ECF8E00BDC7E0 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		43E523A6298E34CA00C3A457 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E242B540294891CE00AF6FE6 /* FirstgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstgradeView.swift; sourceTree = "<group>"; };
@@ -121,9 +133,15 @@
 			children = (
 				ECB6086A2950A3120052AF45 /* 番茄鈴聲.mp3 */,
 				E242B5462948990B00AF6FE6 /* ToMaToView.swift */,
+				436BC194299B814C00F6C980 /* MainMultiplechoice.swift */,
 				E242B5482948997700AF6FE6 /* Multiplechoice.swift */,
 				4347FEB52999E058002F9196 /* Multiplechoicemanager.swift */,
 				4347FEB72999E0A6002F9196 /* Multiplechoicesetting.swift */,
+				436BC19A299B826400F6C980 /* ChoiceA.swift */,
+				436BC19C299B828300F6C980 /* ChoiceB.swift */,
+				436BC19E299B82A400F6C980 /* ChoiceC.swift */,
+				436BC1A0299B82BB00F6C980 /* ChoiceD.swift */,
+				436BC1A2299B82D400F6C980 /* ChoiceE.swift */,
 				ECA9568529690A43007408FF /* ScheduleListMain.swift */,
 				E242B54A294899B700AF6FE6 /* Schedule.swift */,
 				ECDC0DB32958362200886B3F /* ScheduleList.swift */,
@@ -300,7 +318,9 @@
 				E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */,
 				ECA956752962EEC4007408FF /* AddImage.swift in Sources */,
 				ECA956772962F4D8007408FF /* ScheduleList2.swift in Sources */,
+				436BC19F299B82A400F6C980 /* ChoiceC.swift in Sources */,
 				ECA9568629690A44007408FF /* ScheduleListMain.swift in Sources */,
+				436BC19D299B828300F6C980 /* ChoiceB.swift in Sources */,
 				4347FEB82999E0A6002F9196 /* Multiplechoicesetting.swift in Sources */,
 				E242B543294892A200AF6FE6 /* SencondgradeView.swift in Sources */,
 				43E523A7298E34CA00C3A457 /* AppDelegate.swift in Sources */,
@@ -309,12 +329,16 @@
 				E24C6791294B1C6C00D54E03 /* HomeView.swift in Sources */,
 				E242B54D29489C2F00AF6FE6 /* Wrongquestion.swift in Sources */,
 				E242B5492948997700AF6FE6 /* Multiplechoice.swift in Sources */,
+				436BC1A1299B82BB00F6C980 /* ChoiceD.swift in Sources */,
 				E242B54B294899B700AF6FE6 /* Schedule.swift in Sources */,
 				EC2365D0296D05F500C34D43 /* Wrongquestiontitle.swift in Sources */,
 				E26FEADD2941730C00FDEAAF /* TheFirstAPPApp.swift in Sources */,
 				ECDC0DB42958362200886B3F /* ScheduleList.swift in Sources */,
 				EC1E865A295964060097CA84 /* ScheduleView.swift in Sources */,
+				436BC19B299B826400F6C980 /* ChoiceA.swift in Sources */,
 				E24C678F294B16A900D54E03 /* BottomView.swift in Sources */,
+				436BC1A3299B82D400F6C980 /* ChoiceE.swift in Sources */,
+				436BC195299B814C00F6C980 /* MainMultiplechoice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,7 +36,13 @@ class Multplechoicemanager : ObservableObject {
                     let date = ducument.data()
                     
                     let id = date["id"] as? String ?? ""
-                    let Information = Multiplechoicesetting(id: id, dID: dID)
+                    let CH1 = date["CH1"] as? String ?? ""
+                    let CH2 = date["CH2"] as? String ?? ""
+                    let CH3 = date["CH3"] as? String ?? ""
+                    let CH4 = date["CH4"] as? String ?? ""
+                    let CH5 = date["CH5"] as? String ?? ""
+                    let CHTitle = date["CHTitle"] as? String ?? ""
+                    let Information = Multiplechoicesetting(id: id, dID: dID,CH1: CH1,CH2: CH2,CH3: CH3,CH4: CH4,CH5: CH5,CHTitle: CHTitle)
                     
                     self.MIF.append(Information)
                 }
