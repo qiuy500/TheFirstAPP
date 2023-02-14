@@ -40,6 +40,9 @@ class Multplechoicemanager : ObservableObject {
                     
                     self.MIF.append(Information)
                 }
+            }else{
+                print("firebase is  down")
+
             }
 
 
