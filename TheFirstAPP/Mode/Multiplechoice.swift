@@ -6,42 +6,40 @@
 //
 
 import SwiftUI
-
+import Firebase
 
 
 struct Multiplechoice: View {
-    @State private var value: Double = 0.5
-    @State private var dragging = false
-
+    @EnvironmentObject var Mm :Multplechoicemanager
     var body: some View {
-        ZStack {
-            Circle()
-                .fill(LinearGradient(gradient: Gradient(colors: [.green, .blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
-                .frame(width: 200, height: 200)
-            Text("\(value)")
-            Circle()
-                .fill(Color.gray)
-                .frame(width: 20, height: 20)
-                .offset(x: (value - 0.5) * 200, y: 0)
-                .gesture(
-                    DragGesture()
-                        .onChanged { value in
-                            self.dragging = true
-                            self.value = min(1, max(0, value.location.x / 200 + 0.5))
+        VStack{
+           
+            //Text(Mm.MIF[1].id)
+
+            List{
+                /*ForEach(0..<Mm.MIF.count,id:\.self){index in
+                    
+                    VStack(alignment: .center){
+                        Text(Mm.MIF[index].id)
+                    }
+                    
+                }*/
+                ForEach(Mm.MIF){ std in
+                    HStack {
+                        VStack(alignment:.center) {
+                            Text(std.id)
+                            Text(std.dID)
                         }
-                        .onEnded { _ in
-                            self.dragging = false
-                        }
-                )
-            Circle()
-                .trim(from: 0, to: CGFloat(value))
-                .stroke(Color.red, style: StrokeStyle(lineWidth: 20, lineCap: .round))
-                .frame(width: 200, height: 200)
+                        
+                    }
+                    
+                }
+            }
         }
     }
 }
 struct Multiplechoice_Previews: PreviewProvider {
     static var previews: some View {
-        Multiplechoice()
+        Multiplechoice().environmentObject(Multplechoicemanager())
     }
 }

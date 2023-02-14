@@ -4,21 +4,25 @@
 //
 //  Created by 暨大附中２ on 2022/12/8.
 //
-
 import SwiftUI
 
 @main
+
 struct TheFirstAPPApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @StateObject var studentManager = AddImage()
+    @StateObject var Ｍn = Multplechoicemanager()
+    //@StateObject var studentManager= AddImage()
     var body: some Scene {
         WindowGroup {
             if #available(iOS 16.0, *) {
-                Wrongquestion().environmentObject(studentManager)
+                Multiplechoice().environmentObject(Multplechoicemanager())
+                //ImageTest().environmentObject(AddImage())
+
             } else {
                 // Fallback on earlier versions
             }
             //ContentView()
         }
     }
+
 }

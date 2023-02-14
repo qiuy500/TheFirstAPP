@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseStorage
 
 class Multplechoicemanager : ObservableObject {
     @Published var MIF : [Multiplechoicesetting] = []
@@ -30,19 +31,18 @@ class Multplechoicemanager : ObservableObject {
             
             if let snapshot = snapshot {
                 for ducument in snapshot.documents {
+                    let dID = ducument.documentID
+
                     let date = ducument.data()
                     
                     let id = date["id"] as? String ?? ""
-                    let dID = ducument.documentID
                     let Information = Multiplechoicesetting(id: id, dID: dID)
                     
                     self.MIF.append(Information)
                 }
             }
+
+
         }
-        
-        
-        
-        
     }
 }

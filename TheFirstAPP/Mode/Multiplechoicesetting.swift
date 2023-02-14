@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-import SwiftUI
-
-struct Multiplechoicesetting:Identifiable {
+struct Multiplechoicesetting:Identifiable,Codable {
     var id: String
-     var dID : String
+    var dID : String
 }
