@@ -54,4 +54,11 @@ class Multplechoicemanager : ObservableObject {
 
         }
     }
+    func removeChoiceE(id:String){ //Delete
+        let db = Firestore.firestore()
+        db.collection("CH5").document(id).delete()
+        fetechMultiplechoice()
+    }
+
 }
+
