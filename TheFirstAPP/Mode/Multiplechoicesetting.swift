@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Multiplechoicesetting:Identifiable,Codable {
-    var id: String
+    var id : String
     var dID : String
     var CH1 : String
     var CH2 : String

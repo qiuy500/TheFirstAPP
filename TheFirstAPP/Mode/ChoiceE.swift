@@ -24,7 +24,6 @@ struct ChoiceE: View {
                 .background(Color.brown)
                 .font(.title)
                 .cornerRadius(40)
-            
             List{
                 ForEach(0..<Mm.MIF.count,id:\.self){index in
                     
@@ -38,11 +37,6 @@ struct ChoiceE: View {
                             .cornerRadius(30)
 
 
-                    }
-                    Button{
-                        Mm.removeChoiceE(id: Mm.MIF[index.first ?? 0].dID)
-                    }label: {
-                        Text("kkk")
                     }
                     
                 }

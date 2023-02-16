@@ -10,6 +10,7 @@
 		431562EB29555B7200FBB4FD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431562EA29555B7100FBB4FD /* TestView.swift */; };
 		4329B359295C8969008F5C38 /* Slider circuiar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329B358295C8969008F5C38 /* Slider circuiar.swift */; };
 		433594C6298A399400598DFD /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433594C5298A399400598DFD /* Student.swift */; };
+		433A83B5299DBA18007C85F5 /* Indextext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A83B4299DBA18007C85F5 /* Indextext.swift */; };
 		4347FEB62999E058002F9196 /* Multiplechoicemanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FEB52999E058002F9196 /* Multiplechoicemanager.swift */; };
 		4347FEB82999E0A6002F9196 /* Multiplechoicesetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347FEB72999E0A6002F9196 /* Multiplechoicesetting.swift */; };
 		436BC193299B309A00F6C980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 436BC192299B309A00F6C980 /* GoogleService-Info.plist */; };
@@ -19,6 +20,7 @@
 		436BC19F299B82A400F6C980 /* ChoiceC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BC19E299B82A400F6C980 /* ChoiceC.swift */; };
 		436BC1A1299B82BB00F6C980 /* ChoiceD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BC1A0299B82BB00F6C980 /* ChoiceD.swift */; };
 		436BC1A3299B82D400F6C980 /* ChoiceE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BC1A2299B82D400F6C980 /* ChoiceE.swift */; };
+		436BC1A7299CB17D00F6C980 /* IndexDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BC1A6299CB17D00F6C980 /* IndexDemo.swift */; };
 		43BF1A7F297ECF8E00BDC7E0 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BF1A7E297ECF8E00BDC7E0 /* ImageView.swift */; };
 		43E523A7298E34CA00C3A457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E523A6298E34CA00C3A457 /* AppDelegate.swift */; };
 		E242B541294891CE00AF6FE6 /* FirstgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B540294891CE00AF6FE6 /* FirstgradeView.swift */; };
@@ -57,6 +59,7 @@
 		431562EA29555B7100FBB4FD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		4329B358295C8969008F5C38 /* Slider circuiar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider circuiar.swift"; sourceTree = "<group>"; };
 		433594C5298A399400598DFD /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		433A83B4299DBA18007C85F5 /* Indextext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indextext.swift; sourceTree = "<group>"; };
 		4347FEB52999E058002F9196 /* Multiplechoicemanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplechoicemanager.swift; sourceTree = "<group>"; };
 		4347FEB72999E0A6002F9196 /* Multiplechoicesetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multiplechoicesetting.swift; sourceTree = "<group>"; };
 		436BC192299B309A00F6C980 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		436BC19E299B82A400F6C980 /* ChoiceC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceC.swift; sourceTree = "<group>"; };
 		436BC1A0299B82BB00F6C980 /* ChoiceD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceD.swift; sourceTree = "<group>"; };
 		436BC1A2299B82D400F6C980 /* ChoiceE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceE.swift; sourceTree = "<group>"; };
+		436BC1A6299CB17D00F6C980 /* IndexDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexDemo.swift; sourceTree = "<group>"; };
 		43BF1A7E297ECF8E00BDC7E0 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		43E523A6298E34CA00C3A457 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E242B540294891CE00AF6FE6 /* FirstgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstgradeView.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			children = (
 				431562EA29555B7100FBB4FD /* TestView.swift */,
 				4329B358295C8969008F5C38 /* Slider circuiar.swift */,
+				436BC1A6299CB17D00F6C980 /* IndexDemo.swift */,
+				433A83B4299DBA18007C85F5 /* Indextext.swift */,
 			);
 			path = "tthe videos Example";
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433A83B5299DBA18007C85F5 /* Indextext.swift in Sources */,
 				431562EB29555B7200FBB4FD /* TestView.swift in Sources */,
 				EC2365D2296D076700C34D43 /* Wrongmanager.swift in Sources */,
 				4329B359295C8969008F5C38 /* Slider circuiar.swift in Sources */,
@@ -333,6 +340,7 @@
 				E242B54B294899B700AF6FE6 /* Schedule.swift in Sources */,
 				EC2365D0296D05F500C34D43 /* Wrongquestiontitle.swift in Sources */,
 				E26FEADD2941730C00FDEAAF /* TheFirstAPPApp.swift in Sources */,
+				436BC1A7299CB17D00F6C980 /* IndexDemo.swift in Sources */,
 				ECDC0DB42958362200886B3F /* ScheduleList.swift in Sources */,
 				EC1E865A295964060097CA84 /* ScheduleView.swift in Sources */,
 				436BC19B299B826400F6C980 /* ChoiceA.swift in Sources */,
