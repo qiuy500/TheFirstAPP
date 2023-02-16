@@ -29,10 +29,14 @@ struct BottomView: View {
                     .tabItem{
                         Image(systemName: "pencil.line")
                     }
-                Wrongquestion()
-                    .tabItem{
-                        Image(systemName: "book.circle")
-                    }
+                if #available(iOS 16.0, *) {
+                    Wrongquestion()
+                        .tabItem{
+                            Image(systemName: "book.circle")
+                        }
+                } else {
+                    // Fallback on earlier versions
+                }
 
                 
             }

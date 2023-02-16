@@ -16,7 +16,8 @@ struct ImageTest: View {
     //@EnvironmentObject var tryimage: AsyncImage
     @State private var selectedItem: PhotosPickerItem?
     @State private var selectedPhotoData:Data?
-    
+    @State var searchName = ""
+
     @State var showImg = false
     var body: some View {
         VStack {
