@@ -25,7 +25,7 @@ struct BottomView: View {
                     .tabItem{
                         Image(systemName: "house")
                     }
-                Multiplechoice().environmentObject(Multplechoicemanager())
+                MainMultiplechioce().environmentObject(Multplechoicemanager())
                     .tabItem{
                         Image(systemName: "pencil.line")
                     }

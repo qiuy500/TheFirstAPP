@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TheFirstAPPApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    //@StateObject var Ｍn = Multplechoicemanager()
+    @StateObject var Ｍn = Multplechoicemanager()
     @StateObject var studentManager = AddImage()
     var body: some Scene {
         WindowGroup {
@@ -18,9 +18,9 @@ struct TheFirstAPPApp: App {
                 //Multiplechoice().environmentObject(Multplechoicemanager())
                 //ContentView()
                 //ImageTest().environmentObject(studentManager)
-                //MainMultiplechioce().environmentObject(Multplechoicemanager())
+                MainMultiplechioce().environmentObject(Multplechoicemanager())
                 //IndexDemo()
-                Indextest().environmentObject(AddImage())
+                //Indextest().environmentObject(AddImage())
 
             } else {
                 // Fallback on earlier versions

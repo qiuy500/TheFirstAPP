@@ -15,10 +15,16 @@ struct MainMultiplechioce: View {
     @State var CHC = [" ","",""]
     @State var CHD = [" ","",""]
     @State var CHE = [" ","",""]
-    @State var lo = 0
+    @State var page = 0
     @State var index = 0
+    @State var step = true
+    init(){
+        Cho()
+    }
     var body: some View {
+
         VStack{
+            Text("\(index)")
             HStack{
                 Image(systemName:"house.fill")
                     .resizable()
@@ -34,8 +40,17 @@ struct MainMultiplechioce: View {
                     .frame(width: 40,height: 40)
                     .offset(x:-20)
                     .onTapGesture {
-                        if (index < Mm.MIF.count){
-                            index = index + 1
+                        if (page < Mm.MIF.count - 1){
+                            page = page + 1
+                            if !step {
+                                
+                                index = page
+                            }
+                        }else{
+                            page = 0
+                            if !step {
+                                index = page
+                            }
                         }
                     }
             }.frame(alignment:.top)//top
@@ -55,38 +70,38 @@ struct MainMultiplechioce: View {
                     .foregroundColor(.white)
             }//分數
             VStack {
-                Text("\(Qu[index])")
+                Text("\(Qu[page])")
                     .foregroundColor(.white)
                     .padding()
                     .frame(width: 350.0)
                     .background(Color.brown)
                     .font(.title)
                     .cornerRadius(10)
-                Text("\(CHA[index])")
+                Text("\(CHA[page])")
                     .padding()
                     .frame(width: 350.0)
                     .background(Color.brown)
                     .font(.title)
                     .cornerRadius(40)
-                Text("\(CHB[index])")
+                Text("\(CHB[page])")
                     .padding()
                     .frame(width: 350.0)
                     .background(Color.brown)
                     .font(.title)
                     .cornerRadius(40)
-                Text("\(CHC[index])")
+                Text("\(CHC[page])")
                     .padding()
                     .frame(width: 350.0)
                     .background(Color.brown)
                     .font(.title)
                     .cornerRadius(40)
-                Text("\(CHD[index])")
+                Text("\(CHD[page])")
                     .padding()
                     .frame(width: 350.0)
                     .background(Color.brown)
                     .font(.title)
                     .cornerRadius(40)
-                Text("\(CHE[index])")
+                Text("\(CHE[page])")
                     .padding()
                     .frame(width: 350.0)
                     .background(Color.brown)
@@ -95,17 +110,33 @@ struct MainMultiplechioce: View {
             }
             
             Button{
-                Qu[index] = "\(Mm.MIF[index].CHTitle)"
-                CHA[index] = "\(Mm.MIF[index].CH1)"
-                CHB[index] = "\(Mm.MIF[index].CH2)"
-                CHC[index] = "\(Mm.MIF[index].CH3)"
-                CHD[index] = "\(Mm.MIF[index].CH4)"
-                CHE[index] = "\(Mm.MIF[index].CH5)"
+                if step{
+                    print("Mm.MIF.count: \(Mm.MIF.count)")
+                    if (index < Mm.MIF.count) {
+                        Qu[index] = "\(Mm.MIF[index].CHTitle)"
+                        CHA[index] = "\(Mm.MIF[index].CH1)"
+                        CHB[index] = "\(Mm.MIF[index].CH2)"
+                        CHC[index] = "\(Mm.MIF[index].CH3)"
+                        CHD[index] = "\(Mm.MIF[index].CH4)"
+                        CHE[index] = "\(Mm.MIF[index].CH5)"
+                        print("index: \(index)")
+                        index += 1
+                    }else{
+                        index = 0
+                        print("index: \(index)")
+                        print("step: \(step)")
+                        step = false
+                    }
+                }
+
             }label: {
                 Text("b")
             }
             
         }
+    }
+    func Cho(){
+
     }
 }
 

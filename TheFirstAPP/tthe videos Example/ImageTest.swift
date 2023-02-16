@@ -20,7 +20,6 @@ struct ImageTest: View {
     @State var showImg = false
     var body: some View {
         VStack {
-            Text("0101010001")
             HStack{
                 PhotosPicker(selection: $selectedItem, matching: .images) {
                     Label("選擇相片", systemImage: "photo")
