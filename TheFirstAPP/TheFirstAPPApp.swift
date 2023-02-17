@@ -17,8 +17,8 @@ struct TheFirstAPPApp: App {
             if #available(iOS 16.0, *) {
                 //Multiplechoice().environmentObject(Ｍn)
                 //ContentView()
-                Wrongquestion().environmentObject(Aimage)
-                //MainMultiplechioce().environmentObject(Ｍn)
+                //Wrongquestion().environmentObject(Aimage)
+                MainMultiplechioce().environmentObject(Ｍn)
 
             } else {
                 // Fallback on earlier versions

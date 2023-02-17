@@ -70,7 +70,7 @@ struct MainMultiplechioce: View {
                     .foregroundColor(.white)
             }//分數
             VStack {
-                Text("\(Qu[page])")
+                Text("\(Mm.MIF[0].id)")
                     .foregroundColor(.white)
                     .padding()
                     .frame(width: 350.0)

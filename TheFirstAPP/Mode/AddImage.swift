@@ -239,7 +239,7 @@ class AddImage: ObservableObject {
             }
         }
     }
-    
+    /*
     func addStudent(name:String){ //Create
         let db = Firestore.firestore()
         let ref = db.collection("Student").document()
@@ -317,7 +317,7 @@ class AddImage: ObservableObject {
                 }
             }
         }
-    }
+    }*/
 }
 
 //載入圖片第一種方式
