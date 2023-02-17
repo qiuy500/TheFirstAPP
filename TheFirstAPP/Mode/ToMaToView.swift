@@ -139,18 +139,19 @@ struct ToMaToView: View {
             tomato()
             Circle()
                 .stroke(.black.opacity(0.06),lineWidth: 40)
-            Text("\(CGFloat(toProgress * 2))")
+            Text("\(CGFloat(toProgress * 2) * 2 * 60 * 60)")
                 .padding()
+            Text("時間：\(Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 3600 / 2) 小時 \((Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 60) - (Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 3600 * 60) ) 分鐘\(Int(CGFloat(toProgress * 2) * 2 * 60 * 60) - (Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 60 * 60))秒")
             TextField("輸入時間", text: Binding<String>(get: {
                 return String(self.timeRemaining)
             }, set: {
                 if let newValue = Int($0) {
                     self.timeRemaining = newValue
-                    self.timeRemaining = Int(toProgress) * 2
+                    //self.timeRemaining = Int(toProgress) * 2
                 }
             }))
             .keyboardType(.numberPad)
-            Text("剩餘時間：\(timeRemaining / 60) 分鐘\(timeRemaining - (timeRemaining / 60 * 60))秒")
+            Text("剩餘時間：\(timeRemaining / 3600) 小時 \((timeRemaining / 60) - (timeRemaining / 3600 * 60) ) 分鐘\(timeRemaining - (timeRemaining / 60 * 60))秒")
             //.font(.largeTitle)
                 .padding(.bottom, 50)
                 .onReceive(timer) { _ in // 每次收到 timer 發送的事件時
@@ -170,6 +171,15 @@ struct ToMaToView: View {
                         hour = String(self.timeRemaining)
                     }
                 }
+            Button{
+                if isRunning == false{
+                    isRunning = true
+                }else{
+                    isRunning = false
+                }
+            }label: {
+                Text("dvdv")
+            }
         }.frame(width: screenBounds().width / 1.6,height: screenBounds().width / 1.6)
         
         
