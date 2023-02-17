@@ -16,11 +16,23 @@ struct MainMultiplechioce: View {
     @State var CHD = [" ","",""]
     @State var CHE = [" ","",""]
     @State var page = 0
-    @State var index = 0
+    @State var index = -1
     @State var step = true
-    init(){
-        Cho()
+    
+   let ANS = ["未開始","A","B","B"]
+    init() {
+        /*
+        if index == 0{
+            Qu[index] = "\(Mm.MIF[index].CHTitle)"
+            CHA[index] = "\(Mm.MIF[index].CH1)"
+            CHB[index] = "\(Mm.MIF[index].CH2)"
+            CHC[index] = "\(Mm.MIF[index].CH3)"
+            CHD[index] = "\(Mm.MIF[index].CH4)"
+            CHE[index] = "\(Mm.MIF[index].CH5)"
+            print("index: \(index)")
+        }*/
     }
+
     var body: some View {
 
         VStack{
@@ -42,73 +54,126 @@ struct MainMultiplechioce: View {
                     .onTapGesture {
                         if (page < Mm.MIF.count - 1){
                             page = page + 1
-                            if !step {
-                                
+                            if step {
                                 index = page
                             }
                         }else{
                             page = 0
-                            if !step {
+                            if step {
                                 index = page
+                            }
+                        }
+                        if step{
+                            print("Mm.MIF.count: \(Mm.MIF.count)")
+                            if (index < Mm.MIF.count) {
+                                Qu[index] = "\(Mm.MIF[index].CHTitle)"
+                                CHA[index] = "\(Mm.MIF[index].CH1)"
+                                CHB[index] = "\(Mm.MIF[index].CH2)"
+                                CHC[index] = "\(Mm.MIF[index].CH3)"
+                                CHD[index] = "\(Mm.MIF[index].CH4)"
+                                CHE[index] = "\(Mm.MIF[index].CH5)"
+                                print("index: \(index)")
+                                index += 1
+                            }else{
+                                index = 0
+                                print("index: \(index)")
+                                print("step: \(step)")
+                                step = false
                             }
                         }
                     }
             }.frame(alignment:.top)//top
             ZStack{
-                Text("iji")
+                Text("箭頭")
                     .foregroundColor(.white)
                     .padding(.horizontal,180)
                     .padding(.vertical,15)
                     .background(Color.gray)
-                    .font(.title)
+                    .font(.callout)
                     .cornerRadius(30)
                 
-                Text("分數:")
+                Text("答案:\(ANS[page])")
                     .offset(x:110)
-                Text("XX/??")
-                    .offset(x:-110)
+                Text("請按")
+                    .offset(x:-52)
+                    .foregroundColor(.white)
+
+                Text("開始")
+                    .offset(x:-100)
                     .foregroundColor(.white)
             }//分數
             VStack {
-                Text("\(Mm.MIF[0].id)")
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 350.0)
-                    .background(Color.brown)
-                    .font(.title)
-                    .cornerRadius(10)
-                Text("\(CHA[page])")
-                    .padding()
-                    .frame(width: 350.0)
-                    .background(Color.brown)
-                    .font(.title)
-                    .cornerRadius(40)
-                Text("\(CHB[page])")
-                    .padding()
-                    .frame(width: 350.0)
-                    .background(Color.brown)
-                    .font(.title)
-                    .cornerRadius(40)
-                Text("\(CHC[page])")
-                    .padding()
-                    .frame(width: 350.0)
-                    .background(Color.brown)
-                    .font(.title)
-                    .cornerRadius(40)
-                Text("\(CHD[page])")
-                    .padding()
-                    .frame(width: 350.0)
-                    .background(Color.brown)
-                    .font(.title)
-                    .cornerRadius(40)
-                Text("\(CHE[page])")
-                    .padding()
-                    .frame(width: 350.0)
-                    .background(Color.brown)
-                    .font(.title)
-                    .cornerRadius(40)
+                ZStack{
+                    Text("\(Qu[page])")
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 350.0)
+                        .background(Color.brown)
+                        .font(.headline)
+                        .cornerRadius(10)
+                }
+                ZStack{
+                    Text("\(CHA[page])")
+                        .padding()
+                        .frame(width: 350.0)
+                        .background(Color.brown)
+                        .font(.title)
+                        .cornerRadius(40)
+                    Image(systemName: "a.circle")
+                        .resizable()
+                        .frame(width: 40,height: 40)
+                        .offset(x:-130)
+                    
+                }
+                ZStack{
+                    Text("\(CHB[page])")
+                        .padding()
+                        .frame(width: 350.0)
+                        .background(Color.brown)
+                        .font(.title)
+                        .cornerRadius(40)
+                    Image(systemName: "b.circle")
+                        .resizable()
+                        .frame(width: 40,height: 40)
+                        .offset(x:-130)
+                }
+                ZStack{
+                    Text("\(CHC[page])")
+                        .padding()
+                        .frame(width: 350.0)
+                        .background(Color.brown)
+                        .font(.title)
+                        .cornerRadius(40)
+                    Image(systemName: "c.circle")
+                        .resizable()
+                        .frame(width: 40,height: 40)
+                        .offset(x:-130)
+                }
+                ZStack{
+                    Text("\(CHD[page])")
+                        .padding()
+                        .frame(width: 350.0)
+                        .background(Color.brown)
+                        .font(.title)
+                        .cornerRadius(40)
+                    Image(systemName: "d.circle")
+                        .resizable()
+                        .frame(width: 40,height: 40)
+                        .offset(x:-130)
+                }
+                ZStack{
+                    Text("\(CHE[page])")
+                        .padding()
+                        .frame(width: 350.0)
+                        .background(Color.brown)
+                        .font(.title)
+                        .cornerRadius(40)
+                    Image(systemName: "e.circle")
+                                           .resizable()
+                                           .frame(width: 40,height: 40)
+                                           .offset(x:-130)
+                }
             }
-            
             Button{
                 if step{
                     print("Mm.MIF.count: \(Mm.MIF.count)")
@@ -132,7 +197,6 @@ struct MainMultiplechioce: View {
             }label: {
                 Text("b")
             }
-            
         }
     }
     func Cho(){
@@ -140,9 +204,15 @@ struct MainMultiplechioce: View {
     }
 }
 
-
+/*
 struct MainMultiplechioce_Previews: PreviewProvider {
     static var previews: some View {
         MainMultiplechioce().environmentObject(Multplechoicemanager())
+    }
+}*/
+struct MainMultiplechioce_Previews: PreviewProvider {
+    static var previews: some View {
+        MainMultiplechioce()
+            .environmentObject(Multplechoicemanager())
     }
 }

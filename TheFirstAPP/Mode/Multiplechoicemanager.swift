@@ -15,8 +15,6 @@ class Multplechoicemanager : ObservableObject {
     init(){
         fetechMultiplechoice()
     }
-    
-    
     func fetechMultiplechoice(){
         MIF.removeAll()
         
@@ -50,8 +48,6 @@ class Multplechoicemanager : ObservableObject {
                 print("firebase is  down")
 
             }
-
-
         }
     }
     func removeChoiceE(id:String){ //Delete
