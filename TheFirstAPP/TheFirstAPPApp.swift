@@ -10,15 +10,17 @@ import SwiftUI
 
 struct TheFirstAPPApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @StateObject var Ｍn = Multplechoicemanager()
-    @StateObject var Aimage = AddImage()
+    //@StateObject var Ｍn = Multplechoicemanager()
+    //@StateObject var Aimage = AddImage()
     var body: some Scene {
         WindowGroup {
             if #available(iOS 16.0, *) {
                 //Multiplechoice().environmentObject(Ｍn)
                 //ContentView()
-                Wrongquestion().environmentObject(Aimage)
+                //Wrongquestion().environmentObject(Aimage)
                 //MainMultiplechioce().environmentObject(Ｍn)
+                ToMaToView()
+
 
             } else {
                 // Fallback on earlier versions

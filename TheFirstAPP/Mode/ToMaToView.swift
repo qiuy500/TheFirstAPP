@@ -142,22 +142,24 @@ struct ToMaToView: View {
             Text("\(CGFloat(toProgress * 2) * 2 * 60 * 60)")
                 .padding()
             Text("時間：\(Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 3600 / 2) 小時 \((Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 60) - (Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 3600 * 60) ) 分鐘\(Int(CGFloat(toProgress * 2) * 2 * 60 * 60) - (Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 60 * 60))秒")
+            Text("\(toProgress)")
             TextField("輸入時間", text: Binding<String>(get: {
                 return String(self.timeRemaining)
             }, set: {
                 if let newValue = Int($0) {
                     self.timeRemaining = newValue
-                    //self.timeRemaining = Int(toProgress) * 2
+                    self.timeRemaining = Int(CGFloat(toProgress * 2) * 2 * 60 * 60)
                 }
             }))
             .keyboardType(.numberPad)
-            Text("剩餘時間：\(timeRemaining / 3600) 小時 \((timeRemaining / 60) - (timeRemaining / 3600 * 60) ) 分鐘\(timeRemaining - (timeRemaining / 60 * 60))秒")
+            Text("剩餘時間：\(timeRemaining / 3600 / 2) 小時 \((timeRemaining / 60) - (timeRemaining / 3600 * 60) ) 分鐘\(timeRemaining - (timeRemaining / 60 * 60))秒")
             //.font(.largeTitle)
                 .padding(.bottom, 50)
                 .onReceive(timer) { _ in // 每次收到 timer 發送的事件時
                     if isRunning{
                         if self.timeRemaining > 0 { // 如果計時器還沒有結束
-                            self.timeRemaining -= 1 // 將剩餘時間減一秒
+                            self.timeRemaining -= 5 // 將剩餘時間減一秒
+                            toProgress -= 5 / 2 / 2 / 3600
                             if scale > 0{
                                 scale -= 1
                             }
@@ -168,7 +170,8 @@ struct ToMaToView: View {
                         }
                     }else{
                         //timeRemaining = min * 60 + sen
-                        hour = String(self.timeRemaining)
+                        //hour = String(self.timeRemaining)
+                        self.timeRemaining = Int(CGFloat(toProgress * 2) * 2 * 60 * 60)
                     }
                 }
             Button{
