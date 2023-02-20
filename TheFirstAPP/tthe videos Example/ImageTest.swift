@@ -15,7 +15,9 @@ struct ImageTest: View {
     
     //@EnvironmentObject var tryimage: AsyncImage
     @State private var selectedItem: PhotosPickerItem?
+    //表示相片庫中的一個項目（可以是圖片、視頻或 Live Photo 等）。當用戶選擇一個項目時，它會被賦值給 selectedItem 變量，以便後續處理。
     @State private var selectedPhotoData:Data?
+    //用於保存從相片庫中選擇的圖片數據。
     @State var searchName = ""
 
     @State var showImg = false
@@ -30,6 +32,7 @@ struct ImageTest: View {
                             selectedPhotoData = data
                             showImg = true
                             await studentManager.upload(image: UIImage(data: data)!,name: "pictureName\(Date.now.description)")
+                            //使用await和async異步編程，其目的是將從相片庫中選擇的圖片上傳到 Firebase雲端存儲服務中。具體來說，程式碼中的await 用於異步等待讀取圖片數據，並將讀取到的數據轉換為UIImage 對象，然後再將該對象作為參數調用studentManager對象的upload 方法進行上傳。這個upload方法使用Firebase的相關API 實現圖片的上傳操作，其中第一個參數是UIImage對象，第二個參數是檔名，這裡檔名使用當前時間的描述來命名。
                         }
                     }
                     

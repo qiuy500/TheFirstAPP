@@ -76,6 +76,7 @@ struct MainMultiplechioce: View {
                             print("Mm.MIF.count: \(Mm.MIF.count)")
                             if (index < Mm.MIF.count) {
                                 Qu.insert("\(Mm.MIF[index].CHTitle)", at: index)
+                                //使用數組的 insert 方法插入新元素,使用數組的 insert 方法將新元素插入到指定索引處。
                                 CHA.insert("\(Mm.MIF[index].CH1)", at: index)
                                 CHB.insert("\(Mm.MIF[index].CH2)", at: index)
                                 CHC.insert("\(Mm.MIF[index].CH3)", at: index)
