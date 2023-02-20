@@ -16,10 +16,13 @@ struct MainMultiplechioce: View {
     @State var CHD = [" ","",""]
     @State var CHE = [" ","",""]
     @State var page = 0
-    @State var index = -1
+    @State var index = 0
     @State var step = true
+    @State var ANSset = false
+    @State var ANScancel = true
+   @State var Xset = 1000
     
-   let ANS = ["未開始","A","B","B"]
+   let ANS = ["A","B","B"]
     init() {
         /*
         if index == 0{
@@ -34,8 +37,14 @@ struct MainMultiplechioce: View {
     }
 
     var body: some View {
-
+        
         VStack{
+            
+            Button{
+                Xset = 110
+            }label: {
+                            Text("顯現答案")
+                        }
             Text("\(index)")
             HStack{
                 Image(systemName:"house.fill")
@@ -74,11 +83,14 @@ struct MainMultiplechioce: View {
                                 CHE[index] = "\(Mm.MIF[index].CH5)"
                                 print("index: \(index)")
                                 index += 1
+                                ANSset = true
+                                Xset = 1000
                             }else{
                                 index = 0
                                 print("index: \(index)")
                                 print("step: \(step)")
                                 step = false
+                                
                             }
                         }
                     }
@@ -91,9 +103,11 @@ struct MainMultiplechioce: View {
                     .background(Color.gray)
                     .font(.callout)
                     .cornerRadius(30)
+                if ANSset == true{
+                    Text("答案:\(ANS[page])")
+                        .offset(x:CGFloat(Xset))
+                }
                 
-                Text("答案:\(ANS[page])")
-                    .offset(x:110)
                 Text("請按")
                     .offset(x:-52)
                     .foregroundColor(.white)
@@ -174,29 +188,7 @@ struct MainMultiplechioce: View {
                                            .offset(x:-130)
                 }
             }
-            Button{
-                if step{
-                    print("Mm.MIF.count: \(Mm.MIF.count)")
-                    if (index < Mm.MIF.count) {
-                        Qu[index] = "\(Mm.MIF[index].CHTitle)"
-                        CHA[index] = "\(Mm.MIF[index].CH1)"
-                        CHB[index] = "\(Mm.MIF[index].CH2)"
-                        CHC[index] = "\(Mm.MIF[index].CH3)"
-                        CHD[index] = "\(Mm.MIF[index].CH4)"
-                        CHE[index] = "\(Mm.MIF[index].CH5)"
-                        print("index: \(index)")
-                        index += 1
-                    }else{
-                        index = 0
-                        print("index: \(index)")
-                        print("step: \(step)")
-                        step = false
-                    }
-                }
-
-            }label: {
-                Text("b")
-            }
+            
         }
     }
     func Cho(){
@@ -204,12 +196,7 @@ struct MainMultiplechioce: View {
     }
 }
 
-/*
-struct MainMultiplechioce_Previews: PreviewProvider {
-    static var previews: some View {
-        MainMultiplechioce().environmentObject(Multplechoicemanager())
-    }
-}*/
+
 struct MainMultiplechioce_Previews: PreviewProvider {
     static var previews: some View {
         MainMultiplechioce()
