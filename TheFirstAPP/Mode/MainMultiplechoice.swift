@@ -9,33 +9,33 @@ import SwiftUI
 
 struct MainMultiplechioce: View {
     @EnvironmentObject var Mm :Multplechoicemanager
-    @State var Qu = [" ","",""]
-    @State var CHA = [" ","",""]
-    @State var CHB = [" ","",""]
-    @State var CHC = [" ","",""]
-    @State var CHD = [" ","",""]
-    @State var CHE = [" ","",""]
+    @State var Qu = [""]
+    @State var CHA = [""]
+    @State var CHB = [""]
+    @State var CHC = [""]
+    @State var CHD = [" "]
+    @State var CHE = [""]
     @State var page = 0
     @State var index = 0
     @State var step = true
     @State var ANSset = false
     @State var ANScancel = true
-   @State var Xset = 1000
+    @State var Xset = 1000
     
-   let ANS = ["A","B","B"]
+    let ANS = ["A","B","B"]
     init() {
         /*
-        if index == 0{
-            Qu[index] = "\(Mm.MIF[index].CHTitle)"
-            CHA[index] = "\(Mm.MIF[index].CH1)"
-            CHB[index] = "\(Mm.MIF[index].CH2)"
-            CHC[index] = "\(Mm.MIF[index].CH3)"
-            CHD[index] = "\(Mm.MIF[index].CH4)"
-            CHE[index] = "\(Mm.MIF[index].CH5)"
-            print("index: \(index)")
-        }*/
+         if index == 0{
+         Qu[index] = "\(Mm.MIF[index].CHTitle)"
+         CHA[index] = "\(Mm.MIF[index].CH1)"
+         CHB[index] = "\(Mm.MIF[index].CH2)"
+         CHC[index] = "\(Mm.MIF[index].CH3)"
+         CHD[index] = "\(Mm.MIF[index].CH4)"
+         CHE[index] = "\(Mm.MIF[index].CH5)"
+         print("index: \(index)")
+         }*/
     }
-
+    
     var body: some View {
         
         VStack{
@@ -43,8 +43,8 @@ struct MainMultiplechioce: View {
             Button{
                 Xset = 110
             }label: {
-                            Text("顯現答案")
-                        }
+                Text("顯現答案")
+            }
             Text("\(index)")
             HStack{
                 Image(systemName:"house.fill")
@@ -75,13 +75,21 @@ struct MainMultiplechioce: View {
                         if step{
                             print("Mm.MIF.count: \(Mm.MIF.count)")
                             if (index < Mm.MIF.count) {
-                                Qu[index] = "\(Mm.MIF[index].CHTitle)"
-                                CHA[index] = "\(Mm.MIF[index].CH1)"
-                                CHB[index] = "\(Mm.MIF[index].CH2)"
-                                CHC[index] = "\(Mm.MIF[index].CH3)"
-                                CHD[index] = "\(Mm.MIF[index].CH4)"
-                                CHE[index] = "\(Mm.MIF[index].CH5)"
+                                Qu.insert("\(Mm.MIF[index].CHTitle)", at: index)
+                                CHA.insert("\(Mm.MIF[index].CH1)", at: index)
+                                CHB.insert("\(Mm.MIF[index].CH2)", at: index)
+                                CHC.insert("\(Mm.MIF[index].CH3)", at: index)
+                                CHD.insert("\(Mm.MIF[index].CH4)", at: index)
+                                CHE.insert("\(Mm.MIF[index].CH5)", at: index)
+
+                                //Qu[index] = "\(Mm.MIF[index].CHTitle)"
+                                //CHA[index] = "\(Mm.MIF[index].CH1)"
+                                //CHB[index] = "\(Mm.MIF[index].CH2)"
+                                //CHC[index] = "\(Mm.MIF[index].CH3)"
+                                //CHD[index] = "\(Mm.MIF[index].CH4)"
+                                //CHE[index] = "\(Mm.MIF[index].CH5)"
                                 print("index: \(index)")
+                                print(CHA)
                                 index += 1
                                 ANSset = true
                                 Xset = 1000
@@ -111,7 +119,7 @@ struct MainMultiplechioce: View {
                 Text("請按")
                     .offset(x:-52)
                     .foregroundColor(.white)
-
+                
                 Text("開始")
                     .offset(x:-100)
                     .foregroundColor(.white)
@@ -183,16 +191,16 @@ struct MainMultiplechioce: View {
                         .font(.title)
                         .cornerRadius(40)
                     Image(systemName: "e.circle")
-                                           .resizable()
-                                           .frame(width: 40,height: 40)
-                                           .offset(x:-130)
+                        .resizable()
+                        .frame(width: 40,height: 40)
+                        .offset(x:-130)
                 }
             }
             
         }
     }
     func Cho(){
-
+        
     }
 }
 

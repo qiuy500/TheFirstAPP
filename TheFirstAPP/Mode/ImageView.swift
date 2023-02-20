@@ -21,7 +21,7 @@ struct ImageView: View {
             Image(uiImage: image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width:100, height:100)
+                .frame(width:200, height:200)
                 .onReceive(imageLoader.didChange) { data in
                 self.image = UIImage(data: data) ?? UIImage()
         }

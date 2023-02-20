@@ -62,12 +62,28 @@ struct Wrongquestion: View {
                     .padding()
                     .foregroundColor(.white)
             }
+            if var selectedPhotoData,
+               let image = UIImage(data: selectedPhotoData){
+                if showImg {
+                    VStack{
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFill()
+                        .clipped()
+                        Button {
+                            showImg = false
+                            Aimage.listAllFiles()
+                        } label: {
+                            Text("確定")
+                        }
+
+                    }
+                }
+            }
             NavigationView {
                 List{
                     ForEach(Aimage.myPics,id:\.self){ pic in
                         HStack {
-                            //註解為第二種方式
-                            /*AsyncImage(url: URL(string: pic)!, placeholder: {Text("載入中.....")}, image:{Image(uiImage: $0).resizable()}).frame(width: 100, height: 100)*/
                             ImageView(withURL: pic)
                             Button {
                                 Aimage.deleteItem(url: pic)

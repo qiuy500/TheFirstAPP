@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TheFirstAPPApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    //@StateObject var Ｍn = Multplechoicemanager()
+    @StateObject var Ｍn = Multplechoicemanager()
     //@StateObject var Aimage = AddImage()
     var body: some Scene {
         WindowGroup {
@@ -18,8 +18,8 @@ struct TheFirstAPPApp: App {
                 //Multiplechoice().environmentObject(Ｍn)
                 //ContentView()
                 //Wrongquestion().environmentObject(Aimage)
-                //MainMultiplechioce().environmentObject(Ｍn)
-                ToMaToView()
+                MainMultiplechioce().environmentObject(Ｍn)
+                //ToMaToView()
 
 
             } else {
