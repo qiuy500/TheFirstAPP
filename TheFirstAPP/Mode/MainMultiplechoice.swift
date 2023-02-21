@@ -63,14 +63,10 @@ struct MainMultiplechioce: View {
                     .onTapGesture {
                         if (page < Mm.MIF.count - 1){
                             page = page + 1
-                            if step {
-                                index = page
-                            }
+                            index = page
                         }else{
                             page = 0
-                            if step {
-                                index = page
-                            }
+                            index = page
                         }
                         if step{
                             print("Mm.MIF.count: \(Mm.MIF.count)")
@@ -82,13 +78,6 @@ struct MainMultiplechioce: View {
                                 CHC.insert("\(Mm.MIF[index].CH3)", at: index)
                                 CHD.insert("\(Mm.MIF[index].CH4)", at: index)
                                 CHE.insert("\(Mm.MIF[index].CH5)", at: index)
-
-                                //Qu[index] = "\(Mm.MIF[index].CHTitle)"
-                                //CHA[index] = "\(Mm.MIF[index].CH1)"
-                                //CHB[index] = "\(Mm.MIF[index].CH2)"
-                                //CHC[index] = "\(Mm.MIF[index].CH3)"
-                                //CHD[index] = "\(Mm.MIF[index].CH4)"
-                                //CHE[index] = "\(Mm.MIF[index].CH5)"
                                 print("index: \(index)")
                                 print(CHA)
                                 index += 1
