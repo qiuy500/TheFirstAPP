@@ -17,7 +17,6 @@ struct MainMultiplechioce: View {
     @State var CHE = [""]
     @State var page = 0
     @State var index = 0
-    @State var step = true
     @State var ANSset = false
     @State var ANScancel = true
     @State var Xset = 1000
@@ -68,7 +67,6 @@ struct MainMultiplechioce: View {
                             page = 0
                             index = page
                         }
-                        if step{
                             print("Mm.MIF.count: \(Mm.MIF.count)")
                             if (index < Mm.MIF.count) {
                                 Qu.insert("\(Mm.MIF[index].CHTitle)", at: index)
@@ -86,10 +84,8 @@ struct MainMultiplechioce: View {
                             }else{
                                 index = 0
                                 print("index: \(index)")
-                                print("step: \(step)")
-                                step = false
                                 
-                            }
+                            
                         }
                     }
             }.frame(alignment:.top)//top
