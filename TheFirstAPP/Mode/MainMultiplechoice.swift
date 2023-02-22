@@ -17,8 +17,6 @@ struct MainMultiplechioce: View {
     @State var CHE = [""]
     @State var page = 0
     @State var index = 0
-    @State var ANSset = false
-    @State var ANScancel = true
     @State var Xset = 1000
     
     let ANS = ["A","B","B"]
@@ -44,7 +42,7 @@ struct MainMultiplechioce: View {
             }label: {
                 Text("顯現答案")
             }
-            Text("\(index)")
+           
             HStack{
                 Image(systemName:"house.fill")
                     .resizable()
@@ -70,7 +68,6 @@ struct MainMultiplechioce: View {
                             print("Mm.MIF.count: \(Mm.MIF.count)")
                             if (index < Mm.MIF.count) {
                                 Qu.insert("\(Mm.MIF[index].CHTitle)", at: index)
-                                //使用數組的 insert 方法插入新元素,使用數組的 insert 方法將新元素插入到指定索引處。
                                 CHA.insert("\(Mm.MIF[index].CH1)", at: index)
                                 CHB.insert("\(Mm.MIF[index].CH2)", at: index)
                                 CHC.insert("\(Mm.MIF[index].CH3)", at: index)
@@ -79,7 +76,7 @@ struct MainMultiplechioce: View {
                                 print("index: \(index)")
                                 print(CHA)
                                 index += 1
-                                ANSset = true
+                                
                                 Xset = 1000
                             }else{
                                 index = 0
@@ -97,10 +94,10 @@ struct MainMultiplechioce: View {
                     .background(Color.gray)
                     .font(.callout)
                     .cornerRadius(30)
-                if ANSset == true{
+        
                     Text("答案:\(ANS[page])")
                         .offset(x:CGFloat(Xset))
-                }
+                
                 
                 Text("請按")
                     .offset(x:-52)

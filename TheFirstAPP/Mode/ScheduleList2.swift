@@ -20,57 +20,70 @@ struct ScheduleList2: View {
     @State private var fgColor18: Color = .yellow
     @State private var fgColor19: Color = .orange
     @State private var fgColor20: Color = .red
-    
+    let roles = ["國文", "數學", "自然", "社會"]
+    @State private var selectedIndex = 0
     var body: some View {
-        List{
-            Text("午休")
-                .font(.title)
-                .foregroundColor(fgColor20)
+        VStack{
+            Picker(selection: $selectedIndex) {
+                ForEach(roles.indices) { item in
+                    Text(roles[item])
+                }
+            } label: {
+                Text("選擇")
+            }
           
-
-             Text("13:00")
+            List{
+                Text("午休")
+                    .font(.title)
+                    .foregroundColor(fgColor20)
+                    .onTapGesture(count: 1) {
+                        fgColor20 = colors.randomElement()!}
+                
+                
+                Text("13:00")
                     .font(.title)
                     .foregroundColor(fgColor11)
                     .onTapGesture(count: 1) {
                         fgColor11 = colors.randomElement()!}
-            Text("下午第一節")
-                .font(.title)
-                .foregroundColor(fgColor19)
-
-            
+                Text("下午第一節")
+                    .font(.title)
+                    .foregroundColor(fgColor19)
+                
+                
                 Text("14:00").font(.title)
                     .foregroundColor(fgColor12)
                     .onTapGesture(count: 1) {
                         fgColor12 = colors.randomElement()!}
-            
-            Text("下午第二節")
-                .font(.title)
-                .foregroundColor(fgColor18)
+                
+                Text("下午第二節")
+                    .font(.title)
+                    .foregroundColor(fgColor18)
                 Text("15:00").font(.title)
                     .foregroundColor(fgColor13)
                     .onTapGesture(count: 1) {
                         fgColor13 = colors.randomElement()!}
-            Text("下午第三節")
-                .font(.title)
-                .foregroundColor(fgColor17)
-
+                Text("下午第三節")
+                    .font(.title)
+                    .foregroundColor(fgColor17)
+                
                 Text("16:00").font(.title)
                     .foregroundColor(fgColor14)
                     .onTapGesture(count: 1) {
                         fgColor14 = colors.randomElement()!}
-            Text("下午第四節")
-                .font(.title)
-                .foregroundColor(fgColor16)
-
+                Text("下午第四節")
+                    .font(.title)
+                    .foregroundColor(fgColor16)
+                
                 Text("17:00").font(.title)
                     .foregroundColor(fgColor15)
                     .onTapGesture(count: 1) {
                         fgColor15 = colors.randomElement()!}
-               
-               
                 
                 
-            
+                
+                
+                
+            }
         }
     }
 }

@@ -26,7 +26,7 @@ struct Schedule: View {
                         ForEach(0...6,id:\.self){index in
                             NavigationLink{
                                 
-                                ScheduleList()
+                                Schedulechoice()
                             }label: {
                             
                                     Image(testschedule[index % testschedule.count])

@@ -28,6 +28,7 @@
 		E26FEAE12941731000FDEAAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26FEAE02941731000FDEAAF /* Assets.xcassets */; };
 		E26FEAE42941731000FDEAAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26FEAE32941731000FDEAAF /* Preview Assets.xcassets */; };
 		EC1E865A295964060097CA84 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1E8659295964060097CA84 /* ScheduleView.swift */; };
+		EC52D1E729A517B4003D725A /* Schedulechoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC52D1E629A517B4003D725A /* Schedulechoice.swift */; };
 		EC83FA47299F2FF9001D9D12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC83FA46299F2FF9001D9D12 /* GoogleService-Info.plist */; };
 		ECA956732962EE39007408FF /* LoagImg in Resources */ = {isa = PBXBuildFile; fileRef = ECA956722962EE39007408FF /* LoagImg */; };
 		ECA956752962EEC4007408FF /* AddImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA956742962EEC4007408FF /* AddImage.swift */; };
@@ -68,6 +69,7 @@
 		E26FEAE02941731000FDEAAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E26FEAE32941731000FDEAAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC1E8659295964060097CA84 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		EC52D1E629A517B4003D725A /* Schedulechoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedulechoice.swift; sourceTree = "<group>"; };
 		EC83FA46299F2FF9001D9D12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECA956722962EE39007408FF /* LoagImg */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoagImg; sourceTree = "<group>"; };
 		ECA956742962EEC4007408FF /* AddImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImage.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				4347FEB72999E0A6002F9196 /* Multiplechoicesetting.swift */,
 				ECA9568529690A43007408FF /* ScheduleListMain.swift */,
 				E242B54A294899B700AF6FE6 /* Schedule.swift */,
+				EC52D1E629A517B4003D725A /* Schedulechoice.swift */,
 				ECDC0DB32958362200886B3F /* ScheduleList.swift */,
 				ECA956762962F4D8007408FF /* ScheduleList2.swift */,
 				EC1E8659295964060097CA84 /* ScheduleView.swift */,
@@ -293,6 +296,7 @@
 				E242B54D29489C2F00AF6FE6 /* Wrongquestion.swift in Sources */,
 				E242B5492948997700AF6FE6 /* Multiplechoice.swift in Sources */,
 				E242B54B294899B700AF6FE6 /* Schedule.swift in Sources */,
+				EC52D1E729A517B4003D725A /* Schedulechoice.swift in Sources */,
 				E26FEADD2941730C00FDEAAF /* TheFirstAPPApp.swift in Sources */,
 				436BC1A7299CB17D00F6C980 /* IndexDemo.swift in Sources */,
 				ECDC0DB42958362200886B3F /* ScheduleList.swift in Sources */,

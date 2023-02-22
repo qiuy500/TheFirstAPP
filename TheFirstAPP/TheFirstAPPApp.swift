@@ -18,7 +18,7 @@ struct TheFirstAPPApp: App {
                 //Multiplechoice().environmentObject(Ｍn)
                 //ContentView()
                 //Wrongquestion().environmentObject(Aimage)
-                MainMultiplechioce().environmentObject(Ｍn)
+               ContentView().environmentObject(Ｍn)
                 //ToMaToView()
 
 

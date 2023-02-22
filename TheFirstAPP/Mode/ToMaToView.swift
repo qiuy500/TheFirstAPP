@@ -8,10 +8,10 @@
 import SwiftUI
 import AVFoundation
 struct ToMaToView: View {
-    @State var isRunning = false // 記錄定時器是否運行
-    @State private var timeRemaining = 600 // 記錄定時器的剩餘時間
+    @State var isRunning = false
+    @State private var timeRemaining = 600
     @State var hour:String = "0"
-    @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect() // 建立一個計時器
+    @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State private var scale: Double = 300
     @State var audioPlayer: AVAudioPlayer!
     @State private var value: Double = 600
@@ -29,39 +29,39 @@ struct ToMaToView: View {
             tomato()
             Circle()
                 .stroke(.black.opacity(0.06),lineWidth: 40)
-            Text("\(CGFloat(toProgress * 2) * 2 * 60 * 60)")
-                .padding()
+          //  Text("\(CGFloat(toProgress * 2) * 2 * 60 * 60)")
+              //  .padding()
             //Text("時間：\(Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 3600 / 2) 小時 \((Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 60) - (Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 3600 * 60) ) 分鐘\(Int(CGFloat(toProgress * 2) * 2 * 60 * 60) - (Int(CGFloat(toProgress * 2) * 2 * 60 * 60) / 60 * 60))秒")
-            Text("\(toProgress)")
-            TextField("輸入時間", text: Binding<String>(get: {
+           // Text("\(toProgress)")
+         /*   TextField("輸入時間", text: Binding<String>(get: {
                 return String(self.timeRemaining)
             }, set: {
                 if let newValue = Int($0) {
                     self.timeRemaining = newValue
                     self.timeRemaining = Int(CGFloat(toProgress * 2) * 2 * 60 * 60)
                 }
-            }))
+            }))*/
             .keyboardType(.numberPad)
             Text("剩餘時間：\(timeRemaining / 3600 / 2) 小時 \((timeRemaining / 60) - (timeRemaining / 3600 * 60) ) 分鐘\(timeRemaining - (timeRemaining / 60 * 60))秒")
             //.font(.largeTitle)
-                .padding(.bottom, 50)
-                .onReceive(timer) { _ in // 每次收到 timer 發送的事件時
+                .offset(x:5,y: 90)
+                .onReceive(timer) { _ in
                     if isRunning{
-                        if self.timeRemaining > 0 { // 如果計時器還沒有結束
-                            self.timeRemaining -= 1 // 將剩餘時間減一秒
+                        if self.timeRemaining > 0 {
+                            self.timeRemaining -= 1
                             toProgress -= 1 / 2 / 2 / 3600
                             if scale > 0{
                                 scale -= 1
                             }
                             isRunning = true
-                        }else{//計時器結束
+                        }else{
                             self.isRunning = false
-                            soundswitch = true //開叫
+                            soundswitch = true
                             
                         }
                     }else{
-                        //timeRemaining = min * 60 + sen
-                        //hour = String(self.timeRemaining)
+                        
+                        
                         self.timeRemaining = Int(CGFloat(toProgress * 2) * 2 * 60 * 60)
                     }
                 }
@@ -91,7 +91,7 @@ struct ToMaToView: View {
                             .offset(y: (width - 60) / 2)
                             .rotationEffect(.init(degrees: Double(index) * 6))
                     }
-                    let texts = [1,2]
+                    let texts = [6,12]
                     ForEach(texts.indices,id: \.self){index in
                         Text("\(texts[index])")
                         
@@ -136,16 +136,14 @@ struct ToMaToView: View {
     }
     
     func onDrag(value: DragGesture.Value,fromSlider:Bool = false){
-        ///這個函數的作用是處理用戶拖動手勢（DragGesture）事件
+        
         
         let vector = CGVector(dx: value.location.x, dy: value.location.y)
-        //將用戶拖動手勢事件中的坐標點（value.location）轉換為一個向量（CGVector）。
-        // button diamter = 30
-        // radius = 15
+        
         let radians = atan2(vector.dy - 15, vector.dx - 15)
-        //計算出向量所對應的弧度（radians），使用atan2函數來計算向量與 x 軸正方向之間的夾角。
+        
         var angle = radians * 180 / .pi
-        //將弧度轉換為角度（angle），並將其轉換為一個從 0 到 360 的值，以表示滑塊在圓形進度條上的位置。
+      
         if angle < 0{
             angle = 360 + angle
         }

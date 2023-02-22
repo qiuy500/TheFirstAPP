@@ -8,17 +8,7 @@
 import SwiftUI
 
 struct ScheduleList: View {
-    /*var backgrandcolor1:[Color] = [.gray,.red]
-     var backgrandcolor2:[Color] = [.gray,.red]
-     var backgrandcolor3:[Color] = [.gray,.red]
-     var backgrandcolor4:[Color] = [.gray,.red]
-     var backgrandcolor5:[Color] = [.gray,.red]
-     var backgrandcolor6:[Color] = [.gray,.red]
-     var backgrandcolor7:[Color] = [.gray,.red]
-     var backgrandcolor8:[Color] = [.gray,.red]
-     var colorchange:[Color] = [.red]*/
-    let numbers = [1,2,3,4,5,6,7,8,9]
-    @State var selectedNumber: Int? = nil
+    
     let colors: [Color] = [.gray, .red]
     @State private var fgColor1: Color = .gray
     @State private var fgColor2: Color = .gray
@@ -30,9 +20,20 @@ struct ScheduleList: View {
     @State private var fgColor8: Color = .yellow
     @State private var fgColor9: Color = .orange
     @State private var fgColor10: Color = .red
+    let roles = ["國文", "數學", "自然", "社會","英文"]
+        @State private var selectedIndex = 0
+
     
     var body: some View {
         VStack{
+            Picker(selection: $selectedIndex) {
+                ForEach(roles.indices) { item in
+                    Text(roles[item])
+                }
+            } label: {
+                Text("選擇")
+            }
+            
             List{
                 Text("早自習")
                     .font(.title)
@@ -72,6 +73,7 @@ struct ScheduleList: View {
                 
                 
             }
+            
         }
     }
 }
